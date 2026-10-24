@@ -1,0 +1,14 @@
+.obsidian/
+.git/
+.trash/
+local/
+sensitive/
+generated/
+journal/
+attachments/
+.env
+.env.*
+*.key
+*.pem
+__pycache__/
+*.pyc

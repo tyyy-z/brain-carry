@@ -1,0 +1,4 @@
+interface:
+  display_name: "BrainCarry"
+  short_description: "Portable AI profiles and shared knowledge vaults"
+  default_prompt: "Use $brain-carry to set up or maintain my portable AI profile and shared knowledge vault without background jobs or automatic Git pushes."
