@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f1f10">
+  <title>BrainCarry — Models change. Your context stays.</title>
+  <meta name="description" content="A cloud-first, Markdown-based Agent Skill for a shared Second Brain. Engram Cloud for shared notes, Obsidian for editing, manual Git backup when you ask.">
+  <meta property="og:title" content="BrainCarry — Context, to go.">
+  <meta property="og:description" content="Models change. Your context stays. A cloud-first Agent Skill for shared Markdown knowledge you control.">
+  <meta property="og:image" content="https://tyyy-z.github.io/brain-carry/assets/braincarry-banner.png">
+  <meta property="og:url" content="https://tyyy-z.github.io/brain-carry/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://tyyy-z.github.io/brain-carry/">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cabinet-grotesk-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header frame">
+    <a class="wordmark" href="#" aria-label="BrainCarry home"><svg viewBox="0 0 32 32" width="29" height="29" aria-hidden="true"><path d="M12 5H5v22h7M20 5h7v22h-7M16 9v14" fill="none" stroke="currentColor" stroke-width="3"/></svg>BrainCarry</a>
+    <nav aria-label="Main navigation"><a href="#demo">Explore</a><a href="#workflow">Workflow</a><a href="#setup">Install</a></nav>
+    <a class="header-link" href="https://github.com/tyyy-z/brain-carry" data-link="repository">View on GitHub <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 18c-4 1-4-2-6-2m12 5v-3.9a3.4 3.4 0 0 0-1-2.6c3.3-.4 6.8-1.6 6.8-7A5.5 5.5 0 0 0 19.3 4 5.1 5.1 0 0 0 19.1.5S17.8.1 15 2a13.4 13.4 0 0 0-7 0C5.2.1 3.9.5 3.9.5A5.1 5.1 0 0 0 3.7 4a5.5 5.5 0 0 0-1.5 3.8c0 5.4 3.5 6.6 6.8 7a3.4 3.4 0 0 0-1 2.5V21" transform="translate(1 1) scale(.92)"/></svg></a>
+  </header>
+  <main id="main">
+    <section class="hero frame" aria-labelledby="hero-title">
+      <h1 id="hero-title"><span class="line"><span>Context, to go.</span></span></h1>
+      <p class="hero-description">A cloud-first, Markdown-based Agent Skill for shared knowledge across authorized assistants, with Engram Cloud and Obsidian.</p>
+      <a class="button hero-action" href="#setup">Get BrainCarry <span aria-hidden="true">↗</span></a>
+      <div class="hero-exhibit">
+        <p class="hero-aside reveal">Models change.<br>Your context stays.</p>
+        <div class="vault-cover" data-ui aria-label="Synthetic example of a BrainCarry Markdown vault">
+          <div class="vault-top"><span class="mini-brand">BrainCarry</span><span>Example vault</span></div>
+          <div class="vault-document">
+            <div class="file-label"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8M8 17h6"/></svg>AI_BRIEF.md</div>
+            <p class="document-title">Pick up where<br>you left off.</p>
+            <p>Working on Project Lattice: a fictional research project on learning from crystal structures.</p>
+            <div class="note-link">[[Project Lattice]]</div>
+            <dl><div><dt>Preference</dt><dd>Keep sources attached</dd></div><div><dt>Current focus</dt><dd>Read, compare, connect</dd></div><div><dt>Evidence</dt><dd>raw/project-brief.md</dd></div></dl>
+          </div>
+          <div class="vault-bottom"><span>Plain text. Full ownership.</span><span>.md</span></div>
+        </div>
+        <div class="hero-aside hero-aside-right reveal"><p>Keep the useful parts<br>of every introduction.</p><a href="#demo">Open the example <span aria-hidden="true">↓</span></a></div>
+      </div>
+    </section>
+
+    <section class="showcase frame section-space" id="demo" aria-labelledby="demo-title">
+      <div class="section-intro"><h2 id="demo-title" class="reveal">Memory you can open.</h2><p class="reveal">Follow one fictional project through the files. Every useful claim has a place, a source and a way back.</p></div>
+      <div class="demo-layout">
+        <div class="demo-selector" aria-label="Example vault files">
+          <button class="file-choice is-active reveal" data-file="brief" aria-pressed="true" aria-controls="demo-output"><span>Your context</span><span class="choice-path">AI_BRIEF.md</span></button>
+          <button class="file-choice reveal" data-file="source" aria-pressed="false" aria-controls="demo-output"><span>The evidence</span><span class="choice-path">raw/</span></button>
+          <button class="file-choice reveal" data-file="synthesis" aria-pressed="false" aria-controls="demo-output"><span>The connections</span><span class="choice-path">wiki/</span></button>
+          <button class="file-choice reveal" data-file="log" aria-pressed="false" aria-controls="demo-output"><span>What changed</span><span class="choice-path">log.md</span></button>
+          <p class="demo-disclosure">Synthetic example, using the skill’s real file structure. This browser demo does not connect to your notes.</p>
+        </div>
+        <div class="demo-stage reveal">
+          <div class="document-viewer" data-ui id="demo-output" role="region" aria-label="Selected example file" tabindex="0">
+            <div class="viewer-toolbar"><span id="demo-path">AI_BRIEF.md</span><button class="copy-button" id="copy-note" type="button">Copy note</button></div>
+            <div id="demo-body" class="viewer-body"><p class="viewer-title">A little context.<br>A better starting point.</p><p>I’m exploring machine learning for crystal structures through a fictional project called Project Lattice.</p><p><strong>How I work</strong><br>Keep sources linked. Separate a research question from a verified result. Ask before publishing.</p><p><strong>Continue here</strong><br><a href="#demo" data-open-file="synthesis">[[Project Lattice]]</a> holds the current question and next action.</p><p class="viewer-source">Source: raw/project-brief.md · S-DEMO-01</p></div>
+          </div>
+          <div class="stage-caption"><span id="demo-caption">The brief an authorized assistant reads first.</span><span>Demo vault</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow frame section-space" id="workflow" aria-labelledby="workflow-title">
+      <div class="workflow-copy"><h2 id="workflow-title" class="reveal">A trail, not a pile.</h2><p class="lead reveal">Useful memory has a route back to what actually happened.</p><p class="reveal">BrainCarry gives assistants an explicit contribution workflow. Read what exists, preserve the source, maintain linked knowledge, and leave a record.</p><p class="reveal">When another writer may be editing, contribute a unique proposal to <span class="filename">inbox/</span>. A designated editor merges it after checking the evidence.</p><a class="text-link reveal" href="https://github.com/tyyy-z/brain-carry/blob/main/brain-carry/references/contributions.md" data-link="contributions">Read the contribution rules</a></div>
+      <div class="workflow-slip reveal" data-ui aria-label="BrainCarry contribution workflow">
+        <div class="slip-header"><span>BrainCarry</span><span>Contribution trail</span></div>
+        <ol class="trail"><li><strong>Start with context</strong><p>Read the index and the current page.</p><span>index.md</span></li><li><strong>Keep the evidence</strong><p>Preserve origin, dates and uncertainty.</p><span>raw/</span></li><li><strong>Make the connection</strong><p>Update linked synthesis, or propose a change.</p><span>wiki/ &amp; inbox/</span></li><li><strong>Leave the trail</strong><p>Index new pages. Log meaningful changes.</p><span>log.md</span></li></ol>
+        <p class="slip-result">A useful note. A traceable source.</p>
+      </div>
+    </section>
+
+    <section class="principles section-space" id="principles" aria-label="What stays yours">
+      <div class="principle-field field-paper frame"><h2 class="reveal">One vault.<br>Many agents.</h2><div class="principle-text"><p class="reveal">Engram Cloud holds the shared notes. Authorized assistants can retrieve the latest version even when your computer is off. Obsidian is your synchronized editing and reading interface.</p><p class="reveal">Connect each client explicitly and verify a real read/write round trip. An active chat only gets new context when it retrieves it.</p></div></div>
+      <div class="principle-field field-forest frame"><div class="principle-text"><p class="reveal">Your notes remain readable Markdown. Approve each service connection and decide which existing knowledge may enter the cloud. Local-only Markdown remains an offline option.</p><p class="reveal">GitHub is an optional manual backup. Shared notes do not overwrite another model’s built-in memory.</p></div><h2 class="reveal">Your files.<br>Your call.</h2></div>
+    </section>
+
+    <section class="setup frame section-space" id="setup" aria-labelledby="setup-title">
+      <div class="section-intro"><h2 id="setup-title" class="reveal">Pack your context.</h2><p class="reveal">Download the latest source ZIP, extract it, and copy the entire <span class="filename">brain-carry/</span> folder into a skill location supported by your assistant.</p></div>
+      <div class="setup-layout">
+        <div class="setup-details"><p class="lead reveal">Start with one request.</p><p class="reveal">Ask your assistant to plan the recommended Engram Cloud + Obsidian setup. Approve connections and uploads separately. Already have a vault? Preserve your existing notes.</p><p class="reveal">Skill discovery varies by client. An assistant with file access can also read <span class="filename">brain-carry/SKILL.md</span> directly.</p><a class="text-link reveal" href="https://github.com/tyyy-z/brain-carry#quick-start" data-link="quickstart">Full installation guide</a></div>
+        <div class="prompt-sheet reveal" data-ui aria-label="BrainCarry starter prompt">
+          <div class="viewer-toolbar"><span>Ask your assistant</span><button class="copy-button" id="copy-prompt" type="button">Copy prompt</button></div>
+          <p id="starter-prompt">Use $brain-carry to set up a shared Second Brain with Engram Cloud and Obsidian. Preserve my existing notes. Prepare a connection plan and ask before connecting services or uploading data. Keep Git backup manual.</p>
+          <div class="prompt-foot"><span>Shared context. Deliberate access.</span><a href="https://github.com/tyyy-z/brain-carry/blob/main/brain-carry/SKILL.md" data-link="skill">Read SKILL.md</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section-space" id="questions" aria-labelledby="faq-title">
+      <div class="faq-heading frame"><h2 id="faq-title" class="reveal">Before you carry on.</h2></div>
+      <div class="faq-band frame"><h3 class="reveal">Is this a new notes app?</h3><p class="reveal">BrainCarry is an Agent Skill, Markdown templates and local Python tools. It gives your existing assistants a workflow for personal context and shared knowledge. You keep using your own editor.</p></div>
+      <div class="faq-band frame"><h3 class="reveal">Do I need a cloud service?</h3><p class="reveal">For access across agents while your computer is off, the recommended setup is Engram Cloud + Obsidian. Each client needs authorization and read/write verification. Local-only Markdown is supported, but its files require the host to be available. BrainCarry itself is not a sync server.</p></div>
+      <div class="faq-band frame"><h3 class="reveal">Will it remember every chat?</h3><p class="reveal">Saving useful context is an explicit action. Connecting a tool does not automatically archive conversations or load your entire vault. Each assistant needs a startup instruction and access to the selected notes.</p></div>
+      <div class="faq-band frame"><h3 class="reveal">What’s in the download?</h3><p class="reveal">The latest source ZIP includes the cloud-first skill instructions, empty templates, contribution rules and local tools. Python 3.10+ is needed for the initializer and validator. The initial <a class="inline-link" href="https://github.com/tyyy-z/brain-carry/releases/tag/v0.1.0">v0.1.0 release</a> predates these documentation updates.</p></div>
+    </section>
+
+    <section class="download-section section-space" aria-labelledby="download-title"><a class="download-band frame" href="https://github.com/tyyy-z/brain-carry/archive/refs/heads/main.zip" data-link="download"><h2 id="download-title" class="reveal">Download</h2><div class="download-top"><p>Get BrainCarry. Bring your context along.</p><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M11 37 37 11M11 11h26v26"/></svg></div><div class="download-meta"><span data-version>main snapshot</span><span>Latest source ZIP · MIT license</span></div></a></section>
+  </main>
+  <footer class="site-footer frame"><div class="footer-top"><p>Models change.<br>Your context stays.</p><a href="#">Back to top ↑</a></div><p class="footer-wordmark reveal">BrainCarry</p><div class="footer-bottom"><div><a href="https://github.com/tyyy-z/brain-carry" data-link="repository">GitHub</a><a href="https://github.com/tyyy-z/brain-carry/issues" data-link="issues">Feedback</a><a href="https://github.com/tyyy-z/brain-carry/blob/main/LICENSE" data-link="license">MIT license</a></div><p>Cabinet Grotesk by Indian Type Foundry / Fontshare.<br>Original HTML demonstrations. All project examples are fictional.</p><a href="https://github.com/tyyy-z/brain-carry#credits" data-link="credits">Project credits</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

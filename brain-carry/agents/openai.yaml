@@ -1,4 +1,0 @@
-interface:
-  display_name: "BrainCarry"
-  short_description: "Cloud-editable AI profiles across agents and devices"
-  default_prompt: "Use $brain-carry to set up or maintain a cloud-editable personal AI profile using Engram and Obsidian when I authorize the connection; use GitHub only for optional manual backup and never create background Git jobs."
