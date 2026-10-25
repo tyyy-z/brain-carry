@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0f1f10">
   <title>BrainCarry — 模型会变，你的记忆留下。</title>
-  <meta name="description" content="基于 Markdown 的 cloud-first（云优先）Agent Skill（智能体技能）。用 Engram Cloud 共享知识，用 Obsidian 编辑，按需手动备份到 Git。">
+  <meta name="description" content="让不同的 AI 助手从同一份背景、偏好和计划继续帮你。推荐用 Engram Cloud 共享笔记，用 Obsidian 阅读和编辑。">
   <meta property="og:title" content="BrainCarry — 记忆，随身带走。">
-  <meta property="og:description" content="模型会变，你的记忆留下。为多个已授权 AI 助手共享 Markdown 知识的云优先技能。">
+  <meta property="og:description" content="模型会变，你的记忆留下。为下一个 AI 助手保存有用的背景和下一步，由你决定分享什么。">
   <meta property="og:image" content="https://tyyy-z.github.io/brain-carry/assets/braincarry-banner.png">
   <meta property="og:url" content="https://tyyy-z.github.io/brain-carry/zh.html">
   <meta name="twitter:card" content="summary_large_image">
@@ -35,7 +35,7 @@
   <main id="main">
     <section class="hero frame" aria-labelledby="hero-title">
       <h1 id="hero-title"><span class="line"><span>记忆，<br class="mobile-break">随身带走。</span></span></h1>
-      <p class="hero-description">基于 Markdown 的 Agent Skill（智能体技能），以 Engram Cloud 和 Obsidian 为推荐方案，让已授权的 AI 助手共享你的知识。</p>
+      <p class="hero-description">把你的背景、偏好和当前计划放在一处，让已授权的 AI 助手读取和更新。</p>
       <a class="button hero-action" href="#setup">获取 BrainCarry <span aria-hidden="true">↗</span></a>
       <div class="hero-exhibit">
         <p class="hero-aside reveal">模型会变。<br>你的记忆留下。</p>
@@ -44,67 +44,68 @@
           <div class="vault-document">
             <div class="file-label"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8M8 17h6"/></svg>AI_BRIEF.md</div>
             <p class="document-title">接上思路，<br>继续向前。</p>
-            <p>正在探索 Project Lattice：一个关于晶体结构机器学习的虚构研究项目。</p>
-            <div class="note-link">[[Project Lattice]]</div>
-            <dl><div><dt>偏好</dt><dd>保留来源链接</dd></div><div><dt>当前重点</dt><dd>阅读、比较、建立关联</dd></div><div><dt>来源证据</dt><dd>raw/project-brief.md</dd></div></dl>
+            <p>正在准备求职面试。把个人背景、练习计划和下一步放在一起。</p>
+            <div class="note-link">[[面试准备]]</div>
+            <dl><div><dt>偏好</dt><dd>简短、直接的反馈</dd></div><div><dt>当前重点</dt><dd>练习自我介绍</dd></div><div><dt>原始请求</dt><dd>raw/interview-request.md</dd></div></dl>
           </div>
           <div class="vault-bottom"><span>纯文本，由你掌控。</span><span>.md</span></div>
         </div>
-        <div class="hero-aside hero-aside-right reveal"><p>每次自我介绍，<br>都有值得留下的部分。</p><a href="#demo">打开示例 <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-aside hero-aside-right reveal"><p>换一个助手，<br>也能了解你的背景。</p><a href="#demo">打开示例 <span aria-hidden="true">↓</span></a></div>
       </div>
     </section>
 
     <section class="showcase frame section-space" id="demo" aria-labelledby="demo-title">
-      <div class="section-intro"><h2 id="demo-title" class="reveal">记忆，看得见。</h2><p class="reveal">沿着文件查看一个虚构项目。每条有用的信息，都有归属、来源和可追溯的路径。</p></div>
+      <div class="section-intro"><h2 id="demo-title" class="reveal">从日常场景看懂。</h2><p class="reveal">电脑上安排面试练习，手机上接着准备。下一个助手先读保存的背景和下一步，再继续帮你。</p></div>
       <div class="demo-layout">
         <div class="demo-selector" aria-label="知识库示例文件">
           <button class="file-choice is-active reveal" data-file="brief" aria-pressed="true" aria-controls="demo-output"><span>你的背景</span><span class="choice-path">AI_BRIEF.md</span></button>
-          <button class="file-choice reveal" data-file="source" aria-pressed="false" aria-controls="demo-output"><span>原始证据</span><span class="choice-path">raw/</span></button>
-          <button class="file-choice reveal" data-file="synthesis" aria-pressed="false" aria-controls="demo-output"><span>知识关联</span><span class="choice-path">wiki/</span></button>
-          <button class="file-choice reveal" data-file="log" aria-pressed="false" aria-controls="demo-output"><span>变更记录</span><span class="choice-path">log.md</span></button>
-          <p class="demo-disclosure">此处使用真实的 skill 文件结构和虚构内容。浏览器演示不会连接你的笔记。</p>
+          <button class="file-choice reveal" data-file="source" aria-pressed="false" aria-controls="demo-output"><span>你的请求</span><span class="choice-path">raw/</span></button>
+          <button class="file-choice reveal" data-file="synthesis" aria-pressed="false" aria-controls="demo-output"><span>准备计划</span><span class="choice-path">wiki/</span></button>
+          <button class="file-choice reveal" data-file="log" aria-pressed="false" aria-controls="demo-output"><span>进展记录</span><span class="choice-path">log.md</span></button>
+          <p class="demo-disclosure">以下是虚构的求职面试示例。点击查看保存的笔记；演示不会读取你的个人资料。</p>
         </div>
         <div class="demo-stage reveal">
           <div class="document-viewer" data-ui id="demo-output" role="region" aria-label="当前示例文件" tabindex="0">
             <div class="viewer-toolbar"><span id="demo-path">AI_BRIEF.md</span><button class="copy-button" id="copy-note" type="button">复制笔记</button></div>
-            <div id="demo-body" class="viewer-body"><p class="viewer-title">留住背景，<br>接着思考。</p><p>我正在通过虚构项目 Project Lattice，探索晶体结构的机器学习方法。</p><p><strong>协作偏好</strong><br>保留来源链接。区分研究问题和已验证的结果。发布内容前先征得同意。</p><p><strong>从这里继续</strong><br><a href="#demo" data-open-file="synthesis">[[Project Lattice]]</a> 记录了当前问题和下一步行动。</p><p class="viewer-source">来源：raw/project-brief.md · S-DEMO-01</p></div>
+            <div id="demo-body" class="viewer-body"><p class="viewer-title">先了解你，<br>再接着帮。</p><p>我下周有一场客服岗位面试，正在做准备。</p><p><strong>我希望怎样练习</strong><br>每次练习简短一些，反馈直接一点。分享个人信息前先问我。</p><p><strong>下一步</strong><br>打开 <a href="#demo" data-open-file="synthesis">[[面试准备]]</a>，帮我练习一段 60 秒自我介绍。</p><p class="viewer-source">来源：raw/interview-request.md · S-DEMO-01 · 虚构示例</p></div>
           </div>
-          <div class="stage-caption"><span id="demo-caption">已授权助手开始协作时，先读这份简报。</span><span>演示知识库</span></div>
+          <div class="stage-caption"><span id="demo-caption">先了解你的背景，以及你希望怎样获得帮助。</span><span>演示知识库</span></div>
         </div>
       </div>
     </section>
 
     <section class="workflow frame section-space" id="workflow" aria-labelledby="workflow-title">
-      <div class="workflow-copy"><h2 id="workflow-title" class="reveal">每条记忆，都有来处。</h2><p class="lead reveal">有用的记忆，应当能追溯到原始依据。</p><p class="reveal">BrainCarry 为助手提供明确的知识维护流程：先阅读现有内容，保留来源，更新关联知识，并记录变更。</p><p class="reveal">如果其他助手可能正在编辑同一页面，先在 <span class="filename">inbox/</span> 中提交独立提案，再由指定编辑核对依据后合并。</p><a class="text-link reveal" href="https://github.com/tyyy-z/brain-carry/blob/main/brain-carry/references/contributions.md" data-link="contributions">阅读协作规则</a></div>
+      <div class="workflow-copy"><h2 id="workflow-title" class="reveal">把有用的内容留下。</h2><p class="lead reveal">保留有用的细节，也能找到它们的来源。</p><p class="reveal">让助手先读笔记，再保存有用的更新，并留下一条简短记录。下一个助手读取后，就知道从哪里继续。</p><p class="reveal">如果两个助手可能同时编辑同一页，先把修改建议放进 <span class="filename">inbox/</span>，再由你或指定助手核对后合并。</p><a class="text-link reveal" href="https://github.com/tyyy-z/brain-carry/blob/main/brain-carry/references/contributions.md" data-link="contributions">阅读协作规则</a></div>
       <div class="workflow-slip reveal" data-ui aria-label="BrainCarry 知识维护流程">
-        <div class="slip-header"><span>BrainCarry</span><span>知识维护路径</span></div>
-        <ol class="trail"><li><strong>先了解上下文</strong><p>阅读索引和当前页面。</p><span>index.md</span></li><li><strong>保留原始依据</strong><p>记录来源、日期和不确定性。</p><span>raw/</span></li><li><strong>建立知识关联</strong><p>更新关联整理，或提交修改提案。</p><span>wiki/ &amp; inbox/</span></li><li><strong>留下维护记录</strong><p>新页面加入索引，重要修改记入日志。</p><span>log.md</span></li></ol>
-        <p class="slip-result">笔记有用，来源可查。</p>
+        <div class="slip-header"><span>BrainCarry</span><span>笔记怎样持续有用</span></div>
+        <ol class="trail"><li><strong>先读现有笔记</strong><p>先了解你的背景和最近进展。</p><span>index.md</span></li><li><strong>保留原始来源</strong><p>保留你原本的请求和日期。</p><span>raw/</span></li><li><strong>更新当前计划</strong><p>写清下一步，或提出修改建议。</p><span>wiki/ &amp; inbox/</span></li><li><strong>记下这次更新</strong><p>用简短记录告诉下一个助手发生了什么。</p><span>log.md</span></li></ol>
+        <p class="slip-result">笔记有用，下一步清楚。</p>
       </div>
     </section>
 
     <section class="principles section-space" id="principles" aria-label="由你掌控">
-      <div class="principle-field field-paper frame"><h2 class="reveal">一处知识。<br>多方共享。</h2><div class="principle-text"><p class="reveal">Engram Cloud 保存共享笔记。即使电脑关机，已授权的助手仍可从云端读取最新内容；Obsidian 则是同步后的编辑和阅读界面。</p><p class="reveal">逐一授权每个客户端，并完成实际的双向读写验证。已经进行中的对话，需要重新读取笔记才能获得更新。</p></div></div>
-      <div class="principle-field field-forest frame"><div class="principle-text"><p class="reveal">你的笔记仍是可阅读的 Markdown。每次连接服务，都由你批准，也由你决定哪些已有知识可以上传。纯本地 Markdown 仍可作为离线选项。</p><p class="reveal">GitHub 仅作为可选的手动备份。共享笔记不会改写其他模型的内置记忆。</p></div><h2 class="reveal">文件归你。<br>由你做主。</h2></div>
+      <div class="principle-field field-paper frame"><h2 class="reveal">同一份笔记。<br>接着用。</h2><div class="principle-text"><p class="reveal">Engram Cloud 保存共享笔记。分别连接支持的 AI 助手后，它们就能读写笔记，电脑关机时也可以。</p><p class="reveal">你可以用 Obsidian 在设备上阅读和编辑笔记。已经打开的对话，需要重新读取笔记才能获得更新。</p></div></div>
+      <div class="principle-field field-forest frame"><div class="principle-text"><p class="reveal">保存什么、哪些服务可以访问，都由你决定。笔记使用 Markdown，也就是可以在编辑器中直接打开的纯文本。</p><p class="reveal">GitHub 只用于可选的手动备份。共享笔记不会改变模型的内置记忆。</p></div><h2 class="reveal">文件归你。<br>由你做主。</h2></div>
     </section>
 
     <section class="setup frame section-space" id="setup" aria-labelledby="setup-title">
-      <div class="section-intro"><h2 id="setup-title" class="reveal">把你的记忆，带走。</h2><p class="reveal">下载最新 source ZIP（源码压缩包）并解压，将整个 <span class="filename">brain-carry/</span> 文件夹复制到助手支持的 skill 目录。</p></div>
+      <div class="section-intro"><h2 id="setup-title" class="reveal">从你的笔记开始。</h2><p class="reveal">下载 BrainCarry，再让助手帮你配置。连接哪些服务、分享哪些内容，由你决定。</p></div>
       <div class="setup-layout">
-        <div class="setup-details"><p class="lead reveal">从一句请求开始。</p><p class="reveal">让助手先规划推荐的 Engram Cloud + Obsidian 方案，连接服务和上传内容分别审批。如果已有知识库，应保留现有笔记。</p><p class="reveal">各客户端发现 skill 的方式有所不同。有文件访问权限的助手，也可以直接阅读 <span class="filename">brain-carry/SKILL.md</span>。</p><a class="text-link reveal" href="https://github.com/tyyy-z/brain-carry#quick-start" data-link="quickstart">完整安装说明</a></div>
+        <div class="setup-details"><p class="lead reveal">复制这段请求。</p><p class="reveal">推荐用 Engram Cloud 共享笔记，用 Obsidian 阅读和编辑。每个助手都需要分别连接，并得到你的授权。</p><p class="reveal">把 <span class="filename">brain-carry/</span> 放进助手支持的 skill 目录；也可以让有文件权限的助手直接阅读 <span class="filename">brain-carry/SKILL.md</span>。</p><a class="text-link reveal" href="https://github.com/tyyy-z/brain-carry#quick-start" data-link="quickstart">完整安装说明</a></div>
         <div class="prompt-sheet reveal" data-ui aria-label="BrainCarry 启动指令">
           <div class="viewer-toolbar"><span>发送给你的助手</span><button class="copy-button" id="copy-prompt" type="button">复制指令</button></div>
-          <p id="starter-prompt">使用 $brain-carry，规划基于 Engram Cloud 和 Obsidian 的共享 Second Brain（第二大脑）。保留我的现有笔记。先准备连接方案，连接服务或上传数据前征得我的同意。Git 备份保持手动执行。</p>
+          <p id="starter-prompt">使用 $brain-carry，通过 Engram Cloud 和 Obsidian 为我的 AI 助手配置共享笔记。保留现有笔记。连接服务或上传内容前，先说明方案并得到我的同意。GitHub 备份保持手动。</p>
           <div class="prompt-foot"><span>共享上下文，明确授权。</span><a href="https://github.com/tyyy-z/brain-carry/blob/main/brain-carry/SKILL.md" data-link="skill">阅读 SKILL.md</a></div>
         </div>
       </div>
     </section>
 
     <section class="faq section-space" id="questions" aria-labelledby="faq-title">
-      <div class="faq-heading frame"><h2 id="faq-title" class="reveal">开始前，先了解。</h2></div>
-      <div class="faq-band frame"><h3 class="reveal">这是新的笔记应用吗？</h3><p class="reveal">BrainCarry 由 Agent Skill（智能体技能）、Markdown 模板和本地 Python 工具组成，为你已有的助手提供维护个人背景和共享知识的流程。你可以继续使用自己的编辑器。</p></div>
-      <div class="faq-band frame"><h3 class="reveal">一定需要云服务吗？</h3><p class="reveal">如果希望电脑关机时多个助手仍能访问笔记，推荐使用 Engram Cloud + Obsidian。每个客户端都需授权并验证读写。也支持纯本地 Markdown，但读取本地文件需要电脑可用。BrainCarry 本身不提供同步服务器。</p></div>
-      <div class="faq-band frame"><h3 class="reveal">会自动保存所有聊天吗？</h3><p class="reveal">保存有用的上下文是一项明确操作。连接工具不会自动归档所有聊天，也不会加载整个知识库。每个助手都需要启动指令，以及所选笔记的访问权限。</p></div>
+      <div class="faq-heading frame"><h2 id="faq-title" class="reveal">你可能想了解。</h2></div>
+      <div class="faq-band frame"><h3 class="reveal">这是新的笔记应用吗？</h3><p class="reveal">BrainCarry 是一个 Agent Skill（智能体技能）：一套可重复使用的指引，让 AI 知道怎样维护你的笔记。它附带空白模板和可选本地工具，你仍然使用自己的编辑器。</p></div>
+      <div class="faq-band frame"><h3 class="reveal">哪些场景适合用？</h3><p class="reveal">面试练习、学习计划、个人项目，或持续写作。把偏好、有用的笔记和下一步保存下来，让另一个已连接的助手接着帮你。</p></div>
+      <div class="faq-band frame"><h3 class="reveal">一定需要云服务吗？</h3><p class="reveal">如果希望电脑关机时，已连接的助手仍能访问笔记，可以使用 Engram Cloud + Obsidian。也可以全部保存在本地，但访问时需要那台电脑在线。BrainCarry 本身不托管笔记。</p></div>
+      <div class="faq-band frame"><h3 class="reveal">会自动保存所有聊天吗？</h3><p class="reveal">不会。你需要明确要求保存哪些内容。每个助手都需要共享笔记的读写权限；连接工具不等于自动保存所有对话。</p></div>
       <div class="faq-band frame"><h3 class="reveal">下载包里有什么？</h3><p class="reveal">最新源码包包含云优先 skill 说明、空白模板、协作规则和本地工具。初始化与验证工具需要 Python 3.10+。最初的 <a class="inline-link" href="https://github.com/tyyy-z/brain-carry/releases/tag/v0.1.0">v0.1.0 release</a> 早于这次文档更新。</p></div>
     </section>
 

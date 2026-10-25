@@ -12,7 +12,7 @@ These font files are used to render the BrainCarry website and its public promot
 
 ## Noto Sans SC
 
-Chinese glyphs use a local variable-weight Noto Sans SC subset from Google Fonts, containing the public translations' 382 non-ASCII characters. Latin characters keep Cabinet Grotesk. The font works offline and makes no runtime requests to Google.
+Chinese glyphs use a local variable-weight Noto Sans SC subset from Google Fonts, covering the public pages' 359 non-ASCII characters. Latin characters keep Cabinet Grotesk. The font works offline and makes no runtime requests to Google.
 
 Source: https://fonts.google.com/noto/specimen/Noto+Sans+SC
 

@@ -18,26 +18,29 @@
   });
   document.querySelectorAll('[data-version]').forEach(el => { el.textContent = message('version', config.version || 'main snapshot'); });
 
-  // A single synthetic project supplies every view. No private notes or network requests.
-  const evidence = { id: 'S-DEMO-01', project: 'Project Lattice', date: '2026-10-25', path: 'raw/project-brief.md' };
+  // Fictional interview notes use the real file structure. No personal data or network requests.
   const englishFiles = {
-    brief: {
-      path: 'AI_BRIEF.md', caption: 'The brief an authorized assistant reads first.',
-      html: `<p class="viewer-title">A little context.<br>A better starting point.</p><p>I’m exploring machine learning for crystal structures through a fictional project called ${evidence.project}.</p><p><strong>How I work</strong><br>Keep sources linked. Separate a research question from a verified result. Ask before publishing.</p><p><strong>Continue here</strong><br><a href="#demo" data-open-file="synthesis">[[${evidence.project}]]</a> holds the current question and next action.</p><p class="viewer-source">Source: ${evidence.path} · ${evidence.id}</p>`
-    },
-    source: {
-      path: evidence.path, caption: 'The original input stays separate from interpretation.',
-      html: `<p class="viewer-title">The source stays<br>with the idea.</p><p><strong>Source ID</strong> ${evidence.id}<br><strong>Source date</strong> ${evidence.date}<br><strong>Observed</strong> ${evidence.date}<br><strong>Origin</strong> Fictional project brief</p><p>“I want to compare representations of crystal structures. Start with a literature map and a small, reproducible baseline.”</p><p><strong>Evidence status</strong><br>This records a research intention. It is not an experiment or a verified finding.</p><p class="viewer-source">Connected synthesis: <a href="#demo" data-open-file="synthesis">wiki/project-lattice.md</a></p>`
-    },
-    synthesis: {
-      path: 'wiki/project-lattice.md', caption: 'The synthesis names what is known, planned and still open.',
-      html: `<p class="viewer-title">${evidence.project}</p><p><strong>Question</strong><br>Which representations should we compare for learning from crystal structures?</p><p><strong>Current state</strong><br>A research question is recorded. No model has been trained and no result is claimed.</p><p><strong>Next action</strong><br>Build a sourced literature map, then agree on a baseline and evaluation protocol.</p><p><strong>Evidence</strong><br><a href="#demo" data-open-file="source">${evidence.path}</a> [${evidence.id}]</p><p class="viewer-source">Updated ${evidence.date} · Fictional demonstration</p>`
-    },
-    log: {
-      path: 'log.md', caption: 'A change record makes the next handoff easier to inspect.',
-      html: `<p class="viewer-title">What changed,<br>and why.</p><p><strong>${evidence.date} · Example ingest</strong></p><ul><li>Preserved the fictional brief in ${evidence.path}.</li><li>Created a linked ${evidence.project} synthesis.</li><li>Added the project to index.md.</li><li>Updated the brief with the current research question.</li></ul><p><strong>Still open</strong><br>No baseline, benchmark or empirical result has been verified.</p><p class="viewer-source">Source record: <a href="#demo" data-open-file="source">${evidence.id}</a> · Synthetic demo</p>`
-    }
-  };
+  "brief": {
+    "path": "AI_BRIEF.md",
+    "caption": "Your background and how you like to work.",
+    "html": "<p class=\"viewer-title\">Start with<br>what matters.</p><p>I’m preparing for a customer support interview next week.</p><p><strong>How I like help</strong><br>Keep practice sessions short. Give direct feedback. Ask before sharing personal details.</p><p><strong>Next step</strong><br>Open <a href=\"#demo\" data-open-file=\"synthesis\">[[Interview prep]]</a> and help me practice a 60-second introduction.</p><p class=\"viewer-source\">Source: raw/interview-request.md · S-DEMO-01 · Fictional example</p>"
+  },
+  "source": {
+    "path": "raw/interview-request.md",
+    "caption": "The original request, kept as a reference.",
+    "html": "<p class=\"viewer-title\">What I<br>actually said.</p><p>“My customer support interview is next week. Help me prepare a 60-second introduction. I prefer short practice sessions and direct feedback.”</p><p><strong>What this tells us</strong><br>The goal and preferences came from this request. It does not say any practice is complete.</p><p><strong>Source details</strong><br>S-DEMO-01 · Fictional user request<br>Source date and recorded date: 2026-10-25</p><p class=\"viewer-source\">Saved plan: <a href=\"#demo\" data-open-file=\"synthesis\">wiki/interview-prep.md</a></p>"
+  },
+  "synthesis": {
+    "path": "wiki/interview-prep.md",
+    "caption": "The current plan and the next thing to do.",
+    "html": "<p class=\"viewer-title\">Interview prep</p><p><strong>The goal</strong><br>Prepare for a customer support interview next week.</p><p><strong>Where we are</strong><br>A 60-second introduction is the first task. No practice session is recorded yet.</p><p><strong>What the next assistant should do</strong><br>Ask me to try my introduction, then give short, direct feedback.</p><p><strong>Based on</strong><br><a href=\"#demo\" data-open-file=\"source\">raw/interview-request.md</a> [S-DEMO-01]</p><p class=\"viewer-source\">Updated 2026-10-25 · Fictional example</p>"
+  },
+  "log": {
+    "path": "log.md",
+    "caption": "A short record of what was saved or changed.",
+    "html": "<p class=\"viewer-title\">Ready for the<br>next assistant.</p><p><strong>2026-10-25 · Interview plan saved</strong></p><ul><li>Saved the original request in raw/interview-request.md.</li><li>Added the goal and feedback preferences to the brief.</li><li>Created wiki/interview-prep.md with the next practice task.</li><li>Linked the plan from index.md.</li></ul><p><strong>Still to do</strong><br>Practice the introduction. A saved plan is not a completed session.</p><p class=\"viewer-source\">Source: <a href=\"#demo\" data-open-file=\"source\">S-DEMO-01</a> · Fictional example</p>"
+  }
+};
   const files = localized?.files || englishFiles;
   let selected = 'brief';
   const viewer = document.getElementById('demo-output');

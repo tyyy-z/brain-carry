@@ -10,23 +10,23 @@ window.BRAIN_CARRY_ZH = {
   "files": {
     "brief": {
       "path": "AI_BRIEF.md",
-      "caption": "已授权助手开始协作时，先读这份简报。",
-      "html": "<p class=\"viewer-title\">留住背景，<br>接着思考。</p><p>我正在通过虚构项目 Project Lattice，探索晶体结构的机器学习方法。</p><p><strong>协作偏好</strong><br>保留来源链接。区分研究问题和已验证的结果。发布内容前先征得同意。</p><p><strong>从这里继续</strong><br><a href=\"#demo\" data-open-file=\"synthesis\">[[Project Lattice]]</a> 记录了当前问题和下一步行动。</p><p class=\"viewer-source\">来源：raw/project-brief.md · S-DEMO-01</p>"
+      "caption": "先了解你的背景，以及你希望怎样获得帮助。",
+      "html": "<p class=\"viewer-title\">先了解你，<br>再接着帮。</p><p>我下周有一场客服岗位面试，正在做准备。</p><p><strong>我希望怎样练习</strong><br>每次练习简短一些，反馈直接一点。分享个人信息前先问我。</p><p><strong>下一步</strong><br>打开 <a href=\"#demo\" data-open-file=\"synthesis\">[[面试准备]]</a>，帮我练习一段 60 秒自我介绍。</p><p class=\"viewer-source\">来源：raw/interview-request.md · S-DEMO-01 · 虚构示例</p>"
     },
     "source": {
-      "path": "raw/project-brief.md",
-      "caption": "原始输入与后续整理分开保存。",
-      "html": "<p class=\"viewer-title\">想法有出处，<br>依据留得住。</p><p><strong>来源 ID</strong> S-DEMO-01<br><strong>来源日期</strong> 2026-10-25<br><strong>记录日期</strong> 2026-10-25<br><strong>来源类型</strong> 虚构项目简报</p><p>“我想比较不同的晶体结构表征。先整理文献地图，再建立一个小规模、可复现的 baseline（基线）。”</p><p><strong>证据状态</strong><br>这是一项研究意向，不是实验记录，也不是已验证的发现。</p><p class=\"viewer-source\">关联整理：<a href=\"#demo\" data-open-file=\"synthesis\">wiki/project-lattice.md</a></p>"
+      "path": "raw/interview-request.md",
+      "caption": "保存原本的请求，方便之后核对。",
+      "html": "<p class=\"viewer-title\">保留你<br>原本的话。</p><p>“我下周有一场客服岗位面试。帮我准备一段 60 秒自我介绍。我希望每次练习简短一些，反馈直接一点。”</p><p><strong>这段话说明了什么</strong><br>目标和偏好来自这次请求。它没有说明任何练习已经完成。</p><p><strong>来源详情</strong><br>S-DEMO-01 · 虚构用户请求<br>来源日期与记录日期：2026-10-25</p><p class=\"viewer-source\">整理后的计划：<a href=\"#demo\" data-open-file=\"synthesis\">wiki/interview-prep.md</a></p>"
     },
     "synthesis": {
-      "path": "wiki/project-lattice.md",
-      "caption": "知识整理区分已知内容、计划和未解决的问题。",
-      "html": "<p class=\"viewer-title\">Project Lattice</p><p><strong>研究问题</strong><br>对于晶体结构机器学习，应该比较哪些 representation（表征）？</p><p><strong>当前状态</strong><br>研究问题已记录，尚未训练模型，也没有声称取得任何结果。</p><p><strong>下一步</strong><br>建立带来源的文献地图，再明确 baseline（基线）与 evaluation protocol（评估方案）。</p><p><strong>原始依据</strong><br><a href=\"#demo\" data-open-file=\"source\">raw/project-brief.md</a> [S-DEMO-01]</p><p class=\"viewer-source\">更新于 2026-10-25 · 虚构演示</p>"
+      "path": "wiki/interview-prep.md",
+      "caption": "当前准备到哪一步，以及接下来要做什么。",
+      "html": "<p class=\"viewer-title\">面试准备</p><p><strong>目标</strong><br>为下周的客服岗位面试做准备。</p><p><strong>当前进展</strong><br>第一项任务是准备 60 秒自我介绍。还没有完成任何练习的记录。</p><p><strong>下一个助手做什么</strong><br>让我先试着说一遍自我介绍，再给出简短、直接的反馈。</p><p><strong>依据</strong><br><a href=\"#demo\" data-open-file=\"source\">raw/interview-request.md</a> [S-DEMO-01]</p><p class=\"viewer-source\">更新于 2026-10-25 · 虚构示例</p>"
     },
     "log": {
       "path": "log.md",
-      "caption": "变更记录让下一次协作更容易核对。",
-      "html": "<p class=\"viewer-title\">改了什么，<br>为什么改。</p><p><strong>2026-10-25 · 示例资料入库</strong></p><ul><li>在 raw/project-brief.md 中保留虚构项目简报。</li><li>创建 Project Lattice 的关联整理。</li><li>将项目加入 index.md。</li><li>在简报中更新当前研究问题。</li></ul><p><strong>仍待确认</strong><br>尚未验证 baseline（基线）、benchmark（基准测试）或实证结果。</p><p class=\"viewer-source\">来源记录：<a href=\"#demo\" data-open-file=\"source\">S-DEMO-01</a> · 虚构演示</p>"
+      "caption": "用简短记录说明保存了什么、改了什么。",
+      "html": "<p class=\"viewer-title\">下一个助手，<br>知道从哪接。</p><p><strong>2026-10-25 · 保存面试计划</strong></p><ul><li>把原始请求保存在 raw/interview-request.md。</li><li>将目标和反馈偏好加入简报。</li><li>在 wiki/interview-prep.md 写清下一项练习。</li><li>把计划链接加入 index.md。</li></ul><p><strong>还要做什么</strong><br>练习自我介绍。保存计划不等于完成练习。</p><p class=\"viewer-source\">来源：<a href=\"#demo\" data-open-file=\"source\">S-DEMO-01</a> · 虚构示例</p>"
     }
   }
 };

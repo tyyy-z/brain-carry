@@ -10,4 +10,4 @@ The header language link remembers a choice locally and preserves the selected d
 
 Open index.html or zh.html locally, or serve this directory with a local HTTP server. GitHub Pages publishes this branch's root. See [website maintenance](https://github.com/tyyy-z/brain-carry/blob/main/docs/website.md).
 
-Font credits, sources and licenses: [assets/FONTS.md](assets/FONTS.md). Cabinet Grotesk provides Latin type; a local Noto Sans SC subset provides Chinese glyphs. The Project Lattice example is fictional. No private vault data is included.
+Font credits, sources and licenses: [assets/FONTS.md](assets/FONTS.md). Cabinet Grotesk provides Latin type; a local Noto Sans SC subset provides Chinese glyphs. The interview-preparation example is fictional. No private vault data is included.
