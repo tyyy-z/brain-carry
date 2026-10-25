@@ -23,7 +23,9 @@ def build():
             raise ValueError(f'Accessible name changed: {source}')
         html = html.replace(needle, f'aria-label="{translation}"')
     html = html.replace('<html lang="en">', '<html lang="zh-CN">')
-    html = html.replace('<link rel="stylesheet" href="styles.css">', '<link rel="preload" href="assets/fonts/noto-sans-sc-subset.woff2" as="font" type="font/woff2" crossorigin>\n  <link rel="stylesheet" href="styles.css">')
+    stylesheet = re.search(r'<link rel="stylesheet" href="styles\.css(?:\?[^"]*)?">', html)
+    if not stylesheet: raise ValueError('Could not locate the stylesheet')
+    html = html.replace(stylesheet[0], '<link rel="preload" href="assets/fonts/noto-sans-sc-subset.woff2" as="font" type="font/woff2" crossorigin>\n  ' + stylesheet[0], 1)
     metadata = locale['metadata']
     html = re.sub(r'<title>.*?</title>', '<title>' + metadata['title'] + '</title>', html)
     for field, key in [('name="description"', 'description'), ('property="og:title"', 'ogTitle'), ('property="og:description"', 'ogDescription')]:

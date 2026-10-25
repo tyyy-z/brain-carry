@@ -1306,11 +1306,17 @@ html:lang(zh-CN) .prompt-sheet>p {
   .site-header {
     gap:8px;
   }
-  .github-label,.header-link svg {
+  .github-label,.github-short {
     display:none;
   }
-  .github-short {
-    display:inline;
+  .header-link {
+    min-width:44px;
+    justify-content:center;
+  }
+  .header-link svg {
+    display:block;
+    width:20px;
+    height:20px;
   }
   .language-switch {
     padding-inline:10px;
