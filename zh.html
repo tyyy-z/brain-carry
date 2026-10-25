@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f1f10">
+  <title>BrainCarry — 模型会变，你的记忆留下。</title>
+  <meta name="description" content="基于 Markdown 的 cloud-first（云优先）Agent Skill（智能体技能）。用 Engram Cloud 共享知识，用 Obsidian 编辑，按需手动备份到 Git。">
+  <meta property="og:title" content="BrainCarry — 记忆，随身带走。">
+  <meta property="og:description" content="模型会变，你的记忆留下。为多个已授权 AI 助手共享 Markdown 知识的云优先技能。">
+  <meta property="og:image" content="https://tyyy-z.github.io/brain-carry/assets/braincarry-banner.png">
+  <meta property="og:url" content="https://tyyy-z.github.io/brain-carry/zh.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://tyyy-z.github.io/brain-carry/zh.html">
+  <link rel="alternate" hreflang="en" href="https://tyyy-z.github.io/brain-carry/">
+  <link rel="alternate" hreflang="zh-CN" href="https://tyyy-z.github.io/brain-carry/zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://tyyy-z.github.io/brain-carry/">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cabinet-grotesk-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/noto-sans-sc-subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="language.js"></script>
+  <script src="site.config.js" defer></script>
+  <script src="i18n.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header frame">
+    <a class="wordmark" href="#" aria-label="BrainCarry 首页"><svg viewBox="0 0 32 32" width="29" height="29" aria-hidden="true"><path d="M12 5H5v22h7M20 5h7v22h-7M16 9v14" fill="none" stroke="currentColor" stroke-width="3"/></svg>BrainCarry</a>
+    <nav aria-label="主导航"><a href="#demo">看示例</a><a href="#workflow">工作流程</a><a href="#setup">开始使用</a></nav>
+    <div class="header-actions"><a class="header-link" href="https://github.com/tyyy-z/brain-carry" data-link="repository" aria-label="在 GitHub 查看"><span class="github-label">查看 GitHub</span><span class="github-short" aria-hidden="true">GitHub</span><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 18c-4 1-4-2-6-2m12 5v-3.9a3.4 3.4 0 0 0-1-2.6c3.3-.4 6.8-1.6 6.8-7A5.5 5.5 0 0 0 19.3 4 5.1 5.1 0 0 0 19.1.5S17.8.1 15 2a13.4 13.4 0 0 0-7 0C5.2.1 3.9.5 3.9.5A5.1 5.1 0 0 0 3.7 4a5.5 5.5 0 0 0-1.5 3.8c0 5.4 3.5 6.6 6.8 7a3.4 3.4 0 0 0-1 2.5V21" transform="translate(1 1) scale(.92)"/></svg></a><a class="language-switch" id="language-switch" href="index.html?lang=en" lang="en" hreflang="en" aria-label="Switch to English">English</a></div>
+  </header>
+  <main id="main">
+    <section class="hero frame" aria-labelledby="hero-title">
+      <h1 id="hero-title"><span class="line"><span>记忆，<br class="mobile-break">随身带走。</span></span></h1>
+      <p class="hero-description">基于 Markdown 的 Agent Skill（智能体技能），以 Engram Cloud 和 Obsidian 为推荐方案，让已授权的 AI 助手共享你的知识。</p>
+      <a class="button hero-action" href="#setup">获取 BrainCarry <span aria-hidden="true">↗</span></a>
+      <div class="hero-exhibit">
+        <p class="hero-aside reveal">模型会变。<br>你的记忆留下。</p>
+        <div class="vault-cover" data-ui aria-label="BrainCarry Markdown 知识库的虚构示例">
+          <div class="vault-top"><span class="mini-brand">BrainCarry</span><span>示例知识库</span></div>
+          <div class="vault-document">
+            <div class="file-label"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8M8 17h6"/></svg>AI_BRIEF.md</div>
+            <p class="document-title">接上思路，<br>继续向前。</p>
+            <p>正在探索 Project Lattice：一个关于晶体结构机器学习的虚构研究项目。</p>
+            <div class="note-link">[[Project Lattice]]</div>
+            <dl><div><dt>偏好</dt><dd>保留来源链接</dd></div><div><dt>当前重点</dt><dd>阅读、比较、建立关联</dd></div><div><dt>来源证据</dt><dd>raw/project-brief.md</dd></div></dl>
+          </div>
+          <div class="vault-bottom"><span>纯文本，由你掌控。</span><span>.md</span></div>
+        </div>
+        <div class="hero-aside hero-aside-right reveal"><p>每次自我介绍，<br>都有值得留下的部分。</p><a href="#demo">打开示例 <span aria-hidden="true">↓</span></a></div>
+      </div>
+    </section>
+
+    <section class="showcase frame section-space" id="demo" aria-labelledby="demo-title">
+      <div class="section-intro"><h2 id="demo-title" class="reveal">记忆，看得见。</h2><p class="reveal">沿着文件查看一个虚构项目。每条有用的信息，都有归属、来源和可追溯的路径。</p></div>
+      <div class="demo-layout">
+        <div class="demo-selector" aria-label="知识库示例文件">
+          <button class="file-choice is-active reveal" data-file="brief" aria-pressed="true" aria-controls="demo-output"><span>你的背景</span><span class="choice-path">AI_BRIEF.md</span></button>
+          <button class="file-choice reveal" data-file="source" aria-pressed="false" aria-controls="demo-output"><span>原始证据</span><span class="choice-path">raw/</span></button>
+          <button class="file-choice reveal" data-file="synthesis" aria-pressed="false" aria-controls="demo-output"><span>知识关联</span><span class="choice-path">wiki/</span></button>
+          <button class="file-choice reveal" data-file="log" aria-pressed="false" aria-controls="demo-output"><span>变更记录</span><span class="choice-path">log.md</span></button>
+          <p class="demo-disclosure">此处使用真实的 skill 文件结构和虚构内容。浏览器演示不会连接你的笔记。</p>
+        </div>
+        <div class="demo-stage reveal">
+          <div class="document-viewer" data-ui id="demo-output" role="region" aria-label="当前示例文件" tabindex="0">
+            <div class="viewer-toolbar"><span id="demo-path">AI_BRIEF.md</span><button class="copy-button" id="copy-note" type="button">复制笔记</button></div>
+            <div id="demo-body" class="viewer-body"><p class="viewer-title">留住背景，<br>接着思考。</p><p>我正在通过虚构项目 Project Lattice，探索晶体结构的机器学习方法。</p><p><strong>协作偏好</strong><br>保留来源链接。区分研究问题和已验证的结果。发布内容前先征得同意。</p><p><strong>从这里继续</strong><br><a href="#demo" data-open-file="synthesis">[[Project Lattice]]</a> 记录了当前问题和下一步行动。</p><p class="viewer-source">来源：raw/project-brief.md · S-DEMO-01</p></div>
+          </div>
+          <div class="stage-caption"><span id="demo-caption">已授权助手开始协作时，先读这份简报。</span><span>演示知识库</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow frame section-space" id="workflow" aria-labelledby="workflow-title">
+      <div class="workflow-copy"><h2 id="workflow-title" class="reveal">每条记忆，都有来处。</h2><p class="lead reveal">有用的记忆，应当能追溯到原始依据。</p><p class="reveal">BrainCarry 为助手提供明确的知识维护流程：先阅读现有内容，保留来源，更新关联知识，并记录变更。</p><p class="reveal">如果其他助手可能正在编辑同一页面，先在 <span class="filename">inbox/</span> 中提交独立提案，再由指定编辑核对依据后合并。</p><a class="text-link reveal" href="https://github.com/tyyy-z/brain-carry/blob/main/brain-carry/references/contributions.md" data-link="contributions">阅读协作规则</a></div>
+      <div class="workflow-slip reveal" data-ui aria-label="BrainCarry 知识维护流程">
+        <div class="slip-header"><span>BrainCarry</span><span>知识维护路径</span></div>
+        <ol class="trail"><li><strong>先了解上下文</strong><p>阅读索引和当前页面。</p><span>index.md</span></li><li><strong>保留原始依据</strong><p>记录来源、日期和不确定性。</p><span>raw/</span></li><li><strong>建立知识关联</strong><p>更新关联整理，或提交修改提案。</p><span>wiki/ &amp; inbox/</span></li><li><strong>留下维护记录</strong><p>新页面加入索引，重要修改记入日志。</p><span>log.md</span></li></ol>
+        <p class="slip-result">笔记有用，来源可查。</p>
+      </div>
+    </section>
+
+    <section class="principles section-space" id="principles" aria-label="由你掌控">
+      <div class="principle-field field-paper frame"><h2 class="reveal">一处知识。<br>多方共享。</h2><div class="principle-text"><p class="reveal">Engram Cloud 保存共享笔记。即使电脑关机，已授权的助手仍可从云端读取最新内容；Obsidian 则是同步后的编辑和阅读界面。</p><p class="reveal">逐一授权每个客户端，并完成实际的双向读写验证。已经进行中的对话，需要重新读取笔记才能获得更新。</p></div></div>
+      <div class="principle-field field-forest frame"><div class="principle-text"><p class="reveal">你的笔记仍是可阅读的 Markdown。每次连接服务，都由你批准，也由你决定哪些已有知识可以上传。纯本地 Markdown 仍可作为离线选项。</p><p class="reveal">GitHub 仅作为可选的手动备份。共享笔记不会改写其他模型的内置记忆。</p></div><h2 class="reveal">文件归你。<br>由你做主。</h2></div>
+    </section>
+
+    <section class="setup frame section-space" id="setup" aria-labelledby="setup-title">
+      <div class="section-intro"><h2 id="setup-title" class="reveal">把你的记忆，带走。</h2><p class="reveal">下载最新 source ZIP（源码压缩包）并解压，将整个 <span class="filename">brain-carry/</span> 文件夹复制到助手支持的 skill 目录。</p></div>
+      <div class="setup-layout">
+        <div class="setup-details"><p class="lead reveal">从一句请求开始。</p><p class="reveal">让助手先规划推荐的 Engram Cloud + Obsidian 方案，连接服务和上传内容分别审批。如果已有知识库，应保留现有笔记。</p><p class="reveal">各客户端发现 skill 的方式有所不同。有文件访问权限的助手，也可以直接阅读 <span class="filename">brain-carry/SKILL.md</span>。</p><a class="text-link reveal" href="https://github.com/tyyy-z/brain-carry#quick-start" data-link="quickstart">完整安装说明</a></div>
+        <div class="prompt-sheet reveal" data-ui aria-label="BrainCarry 启动指令">
+          <div class="viewer-toolbar"><span>发送给你的助手</span><button class="copy-button" id="copy-prompt" type="button">复制指令</button></div>
+          <p id="starter-prompt">使用 $brain-carry，规划基于 Engram Cloud 和 Obsidian 的共享 Second Brain（第二大脑）。保留我的现有笔记。先准备连接方案，连接服务或上传数据前征得我的同意。Git 备份保持手动执行。</p>
+          <div class="prompt-foot"><span>共享上下文，明确授权。</span><a href="https://github.com/tyyy-z/brain-carry/blob/main/brain-carry/SKILL.md" data-link="skill">阅读 SKILL.md</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section-space" id="questions" aria-labelledby="faq-title">
+      <div class="faq-heading frame"><h2 id="faq-title" class="reveal">开始前，先了解。</h2></div>
+      <div class="faq-band frame"><h3 class="reveal">这是新的笔记应用吗？</h3><p class="reveal">BrainCarry 由 Agent Skill（智能体技能）、Markdown 模板和本地 Python 工具组成，为你已有的助手提供维护个人背景和共享知识的流程。你可以继续使用自己的编辑器。</p></div>
+      <div class="faq-band frame"><h3 class="reveal">一定需要云服务吗？</h3><p class="reveal">如果希望电脑关机时多个助手仍能访问笔记，推荐使用 Engram Cloud + Obsidian。每个客户端都需授权并验证读写。也支持纯本地 Markdown，但读取本地文件需要电脑可用。BrainCarry 本身不提供同步服务器。</p></div>
+      <div class="faq-band frame"><h3 class="reveal">会自动保存所有聊天吗？</h3><p class="reveal">保存有用的上下文是一项明确操作。连接工具不会自动归档所有聊天，也不会加载整个知识库。每个助手都需要启动指令，以及所选笔记的访问权限。</p></div>
+      <div class="faq-band frame"><h3 class="reveal">下载包里有什么？</h3><p class="reveal">最新源码包包含云优先 skill 说明、空白模板、协作规则和本地工具。初始化与验证工具需要 Python 3.10+。最初的 <a class="inline-link" href="https://github.com/tyyy-z/brain-carry/releases/tag/v0.1.0">v0.1.0 release</a> 早于这次文档更新。</p></div>
+    </section>
+
+    <section class="download-section section-space" aria-labelledby="download-title"><a class="download-band frame" href="https://github.com/tyyy-z/brain-carry/archive/refs/heads/main.zip" data-link="download"><h2 id="download-title" class="reveal">下载</h2><div class="download-top"><p>获取 BrainCarry，把你的记忆带走。</p><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M11 37 37 11M11 11h26v26"/></svg></div><div class="download-meta"><span data-version>main 源码快照</span><span>最新源码 ZIP · MIT license</span></div></a></section>
+  </main>
+  <footer class="site-footer frame"><div class="footer-top"><p>模型会变。<br>你的记忆留下。</p><a href="#">回到顶部 ↑</a></div><p class="footer-wordmark reveal">BrainCarry</p><div class="footer-bottom"><div><a href="https://github.com/tyyy-z/brain-carry" data-link="repository">GitHub</a><a href="https://github.com/tyyy-z/brain-carry/issues" data-link="issues">反馈</a><a href="https://github.com/tyyy-z/brain-carry/blob/main/LICENSE" data-link="license">MIT license</a></div><p>Cabinet Grotesk 由 Indian Type Foundry / Fontshare 提供。<br>原创 HTML 演示；所有项目示例均为虚构。</p><a href="https://github.com/tyyy-z/brain-carry#credits" data-link="credits">项目致谢</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,5 +1,8 @@
 (() => {
   'use strict';
+  const isChinese = document.documentElement.lang === 'zh-CN';
+  const localized = isChinese ? window.BRAIN_CARRY_ZH : null;
+  const message = (key, fallback) => localized?.ui[key] || fallback;
   const config = window.BRAIN_CARRY_SITE || {};
   const repository = config.repository || 'https://github.com/tyyy-z/brain-carry';
   const links = {
@@ -13,11 +16,11 @@
     const url = links[link.dataset.link];
     if (url && /^https:\/\//.test(url)) link.href = url;
   });
-  document.querySelectorAll('[data-version]').forEach(el => { el.textContent = config.version || 'main snapshot'; });
+  document.querySelectorAll('[data-version]').forEach(el => { el.textContent = message('version', config.version || 'main snapshot'); });
 
   // A single synthetic project supplies every view. No private notes or network requests.
   const evidence = { id: 'S-DEMO-01', project: 'Project Lattice', date: '2026-10-25', path: 'raw/project-brief.md' };
-  const files = {
+  const englishFiles = {
     brief: {
       path: 'AI_BRIEF.md', caption: 'The brief an authorized assistant reads first.',
       html: `<p class="viewer-title">A little context.<br>A better starting point.</p><p>I’m exploring machine learning for crystal structures through a fictional project called ${evidence.project}.</p><p><strong>How I work</strong><br>Keep sources linked. Separate a research question from a verified result. Ask before publishing.</p><p><strong>Continue here</strong><br><a href="#demo" data-open-file="synthesis">[[${evidence.project}]]</a> holds the current question and next action.</p><p class="viewer-source">Source: ${evidence.path} · ${evidence.id}</p>`
@@ -35,6 +38,7 @@
       html: `<p class="viewer-title">What changed,<br>and why.</p><p><strong>${evidence.date} · Example ingest</strong></p><ul><li>Preserved the fictional brief in ${evidence.path}.</li><li>Created a linked ${evidence.project} synthesis.</li><li>Added the project to index.md.</li><li>Updated the brief with the current research question.</li></ul><p><strong>Still open</strong><br>No baseline, benchmark or empirical result has been verified.</p><p class="viewer-source">Source record: <a href="#demo" data-open-file="source">${evidence.id}</a> · Synthetic demo</p>`
     }
   };
+  const files = localized?.files || englishFiles;
   let selected = 'brief';
   const viewer = document.getElementById('demo-output');
   const body = document.getElementById('demo-body');
@@ -45,7 +49,7 @@
     document.getElementById('demo-path').textContent = file.path;
     document.getElementById('demo-caption').textContent = file.caption;
     body.innerHTML = file.html;
-    viewer.setAttribute('aria-label', `Example file: ${file.path}`);
+    viewer.setAttribute('aria-label', `${message('exampleFile', 'Example file')}: ${file.path}`);
     document.querySelectorAll('[data-file]').forEach(button => {
       const active = button.dataset.file === key;
       button.classList.toggle('is-active', active);
@@ -54,7 +58,21 @@
     viewer.classList.remove('is-swapping');
     void viewer.offsetWidth;
     viewer.classList.add('is-swapping');
+    updateLanguageLink();
   }
+  function updateLanguageLink() {
+    const link = document.getElementById('language-switch');
+    if (!link) return;
+    const target = new URL(isChinese ? 'index.html' : 'zh.html', location.href);
+    target.searchParams.set('lang', isChinese ? 'en' : 'zh');
+    if (selected !== 'brief') target.searchParams.set('file', selected);
+    target.hash = location.hash;
+    link.href = target.href;
+  }
+  const initialFile = new URLSearchParams(location.search).get('file');
+  if (files[initialFile]) openFile(initialFile);
+  else updateLanguageLink();
+  addEventListener('hashchange', updateLanguageLink);
   document.querySelectorAll('[data-file]').forEach(button => button.addEventListener('click', () => openFile(button.dataset.file)));
   body.addEventListener('click', event => {
     const link = event.target.closest('[data-open-file]');
@@ -81,13 +99,13 @@
       range.selectNodeContents(fallbackElement);
       selection.removeAllRanges();
       selection.addRange(range);
-      announce('Text selected. Press Ctrl+C or use your device’s Copy action.');
+      announce(message('copyFallback', 'Text selected. Press Ctrl+C or use your device’s Copy action.'));
     }
   }
-  document.getElementById('copy-note').addEventListener('click', () => copyText(`# ${files[selected].path}\n\n${body.innerText}`, body, 'Example note copied.'));
+  document.getElementById('copy-note').addEventListener('click', () => copyText(`# ${files[selected].path}\n\n${body.innerText}`, body, message('noteCopied', 'Example note copied.')));
   document.getElementById('copy-prompt').addEventListener('click', () => {
     const prompt = document.getElementById('starter-prompt');
-    copyText(prompt.innerText, prompt, 'Starter prompt copied.');
+    copyText(prompt.innerText, prompt, message('promptCopied', 'Starter prompt copied.'));
   });
 
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
