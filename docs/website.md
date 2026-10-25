@@ -35,3 +35,17 @@ Commit reviewed edits to gh-pages to publish them. Pages is configured to publis
 Check the full page on desktop, tablet and phone; exercise source links, copy buttons and keyboard navigation; confirm the release/source URL; check reduced motion and JavaScript-disabled fallback. Verify the published URL, not just a local preview.
 
 Cabinet Grotesk is by Indian Type Foundry / Fontshare. Source and license information are retained in the website's assets/FONTS.md and footer.
+
+## English / Chinese
+
+Use the header's 中文 / English link to switch language. A browser-local preference remembers the choice when storage is available. The link preserves the selected example file and section. English: https://tyyy-z.github.io/brain-carry/?lang=en . Chinese: https://tyyy-z.github.io/brain-carry/zh.html .
+
+The two static pages have their own lang, canonical and reciprocal hreflang links. Both remain readable without JavaScript; filenames, commands and product names stay in English.
+
+Edit index.html for English copy and translations/zh-CN.json for Chinese copy. In the website branch checkout run:
+
+```text
+python scripts/build_locales.py
+```
+
+Commit the generated zh.html and i18n.js along with source changes. language.js manages the optional saved preference; script.js manages the demo. The generator uses Python's standard library and checks that English source strings still match their translations. Hosting remains static with no build step. Chinese glyphs use a local Noto Sans SC subset; font source/license and subset update guidance are in assets/FONTS.md.
