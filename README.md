@@ -2,16 +2,34 @@
 
 **Models change. Your context stays.**
 
-A Markdown-first Agent Skill for a personal AI profile and shared Second Brain across assistants, sessions and devices.
+A cloud-first, Markdown-based Agent Skill for a personal AI profile and shared Second Brain across assistants, sessions and devices. **Recommended: Engram Cloud + Obsidian for everyday sync; GitHub only for optional manual backup.** Local-only Markdown remains supported.
 
 Keep your context somewhere you control. Let authorized assistants read and contribute through an explicit workflow. Switch models without rebuilding the useful parts of your background from scratch.
+
+## Recommended everyday workflow
+
+```text
+                  Engram Cloud · shared notes
+                  (authorized read / write)
+                             ↕
+         ┌───────────────────┼───────────────────┐
+         ↕                   ↕                   ↕
+  ChatGPT / Claude      Other AI agents      Obsidian devices
+  with Engram access    with Engram access    Windows / Mac / phone
+                                                  |
+                                                  └── optional manual Git backup
+```
+
+An authorized assistant updates the **shared cloud note**, not a file on one particular laptop. Another connected assistant can fetch that latest note on its next retrieval, even if the computer is off. Obsidian synchronizes supported notes when its client runs. This **does not** update another model's built-in memory or push context into an already-running conversation. Each client needs its own connection and explicit retrieval behavior.
+
+The Skill provides governance and setup instructions, **not** a hosted sync service; Engram is an optional external service and must be connected with user approval. Mobile and non-Markdown formats require their own verification.
 
 ## What it provides
 
 - A compact profile, preferences and current-work entry point.
 - Raw evidence, linked synthesis, an inbox and an append-only change log.
 - Rules for multiple agents to contribute without silently overwriting each other.
-- An optional Engram/Obsidian setup guide and a read/write verification procedure.
+- A **recommended cloud-first Engram/Obsidian workflow** with per-client onboarding and actual read/write verification; local-only operation stays available.
 - A local-only vault initializer, link validator and public-release checks.
 - Manual Git backup guidance. No scheduled jobs, polling, automatic commits or automatic pushes.
 
@@ -41,8 +59,8 @@ Python 3.10+; standard library only. On Windows, use an absolute Windows path. T
 
 | Mode | What works | What you configure |
 | --- | --- | --- |
-| Local Markdown | An assistant with filesystem access reads and edits notes | A local folder and client instructions |
-| Shared cloud notes | Authorized clients read/write the same notes through a service such as Engram | Service account, vault selection, permissions, device plugin where needed |
+| **Shared cloud notes (recommended)** | Authorized agents retrieve and edit the same cloud knowledge without keeping a personal computer online; Obsidian is a synced human interface | Explicit service authorization, cloud vault selection, per-client credentials, mobile plugin when supported, read/write tests |
+| Local Markdown (offline fallback) | An assistant with filesystem access reads and edits notes, but its computer must be available for that access | A local folder and client instructions |
 | Manual snapshot | A client reads an explicitly supplied brief | Export or paste only the relevant context |
 | Optional Git backup | Version history and recovery | A private destination and a user-requested commit/push |
 
@@ -92,4 +110,4 @@ See [contributing](CONTRIBUTING.md) and [launch copy](docs/launch-copy.md).
 
 The raw-source / maintained-wiki approach is inspired by [Andrej Karpathy's LLM Wiki note](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). This is an independent implementation, not an official Karpathy, Obsidian, Engram or model-provider product. Optional Engram behavior should be checked against its [official user guide](https://github.com/engram-app/Engram-obsidian/blob/main/docs/user-guide.md).
 
-MIT licensed. Version 0.1.0 is the initial release. Local initialization and synthetic filesystem checks were exercised on Windows; live compatibility with every assistant, mobile client or cloud setup is not implied.
+MIT licensed. v0.1.0 is the initial published release; cloud-first documentation updates on main do not constitute a new GitHub Release. Local initialization and synthetic filesystem checks were exercised on Windows; live compatibility with every assistant, mobile client or cloud setup is not implied.
