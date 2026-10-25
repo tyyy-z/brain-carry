@@ -1,5 +1,13 @@
 # Architecture and additive migration
 
+## Cloud-first reference architecture
+
+**Recommended for cross-device, cross-agent continuity:** authorized AI clients ↔ Engram cloud vault ↔ Obsidian on Windows/Mac/phone. The cloud vault holds the live shared Markdown; Obsidian keeps synchronized local copies for human reading and editing. No Windows/Mac machine must remain on for cloud-capable AI agents to retrieve or edit the shared cloud notes. Offline clients catch up when their sync application reconnects. GitHub is **optional, manually triggered backup/version history**, not the live transport, source of agent retrieval, or merge authority.
+
+These are distinct layers: the Skill supplies instructions, permissions and governance; Engram supplies hosted note transport; Obsidian supplies editing; Git supplies optional recovery. The Skill does not itself host storage, discover a user's cloud credentials, or inject fresh context into all open AI sessions.
+
+Cloud-first is a **recommended pathway**, not a mandatory vendor dependency. A user can choose another authorized cloud notes provider with comparable semantics or remain local-only with reduced availability.
+
 ## Separate the artifacts
 
 The public skill is instructions and tooling. A personal vault is private user data. A client's built-in memory is a third, separate system. Do not imply changes to one automatically update the others.
