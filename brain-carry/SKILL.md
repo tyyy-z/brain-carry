@@ -39,3 +39,7 @@ Keep secrets, employer records and private archives outside the shared scope. Gi
 Run `scripts/validate_vault.py --vault <path>` for local structural checks. When connecting a service, also verify the selected vault, exclusions in the running client and an actual round trip. Check supported file types separately from notes. For cloud-first use, verify agent A writes one authorized test note to the specified Engram vault, agent B explicitly retrieves the latest version, and an Obsidian client receives it; repeat tests per device and format. A cloud endpoint can be used while a desktop is off; a local server cannot. Other agents do not automatically reload active context or change built-in memory. Backup behavior depends on its actual host and policy.
 
 Report changed files, actual connection state, validation results and remaining client setup. If only Markdown/MCP tools are available, do not claim local scripts, application settings or structured data were updated.
+
+## Public explanations
+
+Use familiar scenarios such as interview preparation, learning a skill, side projects or writing. Start with the user benefit and a concrete next action. Define unfamiliar terms once and move precise implementation details to the relevant references. Keep examples fictional and distinguish a planned action from a completed one.

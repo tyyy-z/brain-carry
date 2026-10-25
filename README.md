@@ -8,62 +8,101 @@
 
 **Models change. Your context stays.**
 
-A cloud-first, Markdown-based Agent Skill for a personal AI profile and shared Second Brain across assistants, sessions and devices. **Recommended: Engram Cloud + Obsidian for everyday sync; GitHub only for optional manual backup.** Local-only Markdown remains supported.
+Keep the useful things your AI assistants should know about you in one set of notes: your background, preferences, current work and next steps. A connected assistant reads those notes before helping, then saves updates when you ask.
 
-**[Explore the website](https://tyyy-z.github.io/brain-carry/)** · [Get the latest source](https://github.com/tyyy-z/brain-carry/archive/refs/heads/main.zip) · [Quick start](#quick-start) · [Read the skill](brain-carry/SKILL.md)
+**[See the website](https://tyyy-z.github.io/brain-carry/)** · [Download the latest source](https://github.com/tyyy-z/brain-carry/archive/refs/heads/main.zip) · [Quick start](#quick-start) · [Technical details](#technical-details)
 
-Keep your context somewhere you control. Let authorized assistants read and contribute through an explicit workflow. Switch models without rebuilding the useful parts of your background from scratch.
+## An everyday example
 
-## Recommended everyday workflow
+You are preparing for a job interview.
+
+1. **On your laptop:** ask an assistant to save the role you are preparing for, your preferred feedback style and the next practice task.
+2. **On your phone:** ask a connected assistant to read those notes and help you practice your introduction.
+3. **Next session:** ask it to save the useful feedback and next step, so you can continue without repeating the whole introduction.
+
+This is a fictional example of the workflow. Each assistant needs access to the same notes and must actually read them. BrainCarry does not send updates into another chat automatically.
+
+## Where it helps
+
+| Everyday task | Useful details to keep |
+| --- | --- |
+| Interview preparation | Target role, preferred feedback, practice notes and next question |
+| Learning a new skill | Your goal, current lesson, sticking points and next exercise |
+| A side project | Decisions, constraints, what is done and what to work on next |
+| Writing with AI | Audience, writing preferences, approved drafts and open edits |
+
+## How it works
+
+BrainCarry is an **Agent Skill**: reusable instructions that help an AI read and maintain your notes. It includes blank note templates and local tools. You keep using your own assistants and editor.
+
+The recommended shared setup is:
 
 ```mermaid
 flowchart TB
-    Cloud["Engram Cloud<br/>Shared Markdown notes"]
-    Agents["Authorized AI clients<br/>ChatGPT, Claude and other agents"]
-    Obsidian["Obsidian<br/>Windows, Mac and phone"]
-    Backup["Optional private Git backup<br/>Only when you ask"]
-    Cloud <-->|Explicit read / write| Agents
-    Cloud <-->|Supported note sync| Obsidian
-    Obsidian -.->|Manual snapshot| Backup
-    classDef cloud fill:#c6f19d,color:#0f1f10,stroke:#c6f19d
-    classDef client fill:#162a17,color:#ffffff,stroke:#162a17
-    classDef backup fill:#f4f5f1,color:#172018,stroke:#f4f5f1
-    class Cloud cloud
-    class Agents,Obsidian client
-    class Backup backup
+    Notes["Engram Cloud: your shared notes"]
+    AI["AI assistants you connect"]
+    Editor["Obsidian: read and edit on your devices"]
+    Backup["Optional private GitHub backup"]
+    Notes <-->|Read and save updates| AI
+    Notes <-->|Sync supported notes| Editor
+    Editor -.->|Only when you ask| Backup
 ```
 
-An authorized assistant updates the **shared cloud note**, not a file on one particular laptop. Another connected assistant can fetch that latest note on its next retrieval, even if the computer is off. Obsidian synchronizes supported notes when its client runs. This **does not** update another model's built-in memory or push context into an already-running conversation. Each client needs its own connection and explicit retrieval behavior.
+**Engram Cloud** stores the shared notes. **Obsidian** lets you read and edit them on your devices. Each supported AI assistant connects separately, with your permission.
 
-The Skill provides governance and setup instructions, **not** a hosted sync service; Engram is an optional external service and must be connected with user approval. Mobile and non-Markdown formats require their own verification.
+Cloud access can work while your laptop is off. The local Obsidian folder catches up when its sync client runs. If you choose local files only, that computer must be available to read them.
 
-## What it provides
-
-| What you keep | Where it lives | What it gives the next assistant |
-| --- | --- | --- |
-| Your profile, preferences and current work | AI_BRIEF.md, PROFILE.md, PREFERENCES.md, NOW.md | A compact place to start |
-| Original evidence | raw/ | Source records separate from interpretation |
-| Connected knowledge | wiki/ and index.md | Maintained synthesis with a route back to evidence |
-| Proposed changes | inbox/ | A contribution path when another writer may be active |
-| Meaningful changes | log.md | An append-only handoff trail |
-
-The skill includes **cloud-first Engram/Obsidian setup guidance**, per-client onboarding and actual read/write verification. Local-only operation stays available, with a local vault initializer, link validator and public-release checks. Git backup remains manual: no scheduled jobs, polling, automatic commits or automatic pushes.
-
-This repository contains generic instructions, empty templates and synthetic tests. It contains no creator biography, personal vault export, private repository address or account credentials.
+You decide what to save. Connecting a tool does not save every chat or change a model's built-in memory. GitHub is optional manual backup; there is no background scheduler or automatic push.
 
 ## Quick start
 
-**[Download the latest source ZIP](https://github.com/tyyy-z/brain-carry/archive/refs/heads/main.zip)** for the current cloud-first instructions, or clone this repository. Extract it and copy the entire `brain-carry/` folder into a supported skill location.
+### 1. Get the skill
 
-The initial [v0.1.0 release](https://github.com/tyyy-z/brain-carry/releases/tag/v0.1.0) is also available, but predates the cloud-first documentation updates on main.
+Download the [latest source ZIP](https://github.com/tyyy-z/brain-carry/archive/refs/heads/main.zip) and extract it, or clone this repository. Copy the entire `brain-carry/` folder into a skill location supported by your assistant.
 
-The skill lives in [`brain-carry/`](brain-carry/SKILL.md). Copy that entire directory into a skill location supported by your assistant, or ask an assistant with file access to read its `SKILL.md`. Installation and automatic discovery vary by client; copying a folder does not connect any account.
+If your assistant can read local files, you can instead ask it to read [`brain-carry/SKILL.md`](brain-carry/SKILL.md) directly. Installation and automatic skill discovery vary by client.
 
-Invoke it with a request such as:
+The original [v0.1.0 release](https://github.com/tyyy-z/brain-carry/releases/tag/v0.1.0) remains available, but the latest source includes newer documentation.
 
-> Use $brain-carry to create a personal AI profile and shared knowledge vault. Start with empty templates, preserve my existing notes, and configure no external service or automatic backup unless I request it.
+### 2. Ask for help setting up
 
-To create a new local vault without an agent, run these commands from this repository root, replacing `/path/to/new-vault` with your chosen location:
+> Use $brain-carry to set up shared notes for my AI assistants with Engram Cloud and Obsidian. Keep my existing notes. Explain the plan before connecting services or uploading anything. Keep GitHub backup manual.
+
+Your assistant should identify your existing notes, explain the connection plan and help you authorize each client. Downloading the skill does not connect accounts or upload notes.
+
+### 3. Save something useful
+
+> Save that I prefer short, direct feedback, and that my next task is to practice a 60-second interview introduction. Keep this in my selected private vault.
+
+Then ask another authorized assistant to read the saved note. Check that it can read an update and save one back before relying on the connection. Repeat that check for your phone or another computer.
+
+## What is saved where?
+
+A **vault** is simply the folder or collection holding your notes. A **Second Brain** is the useful knowledge you maintain there.
+
+| File or folder | Plain-language purpose |
+| --- | --- |
+| `AI_BRIEF.md` | A short introduction for a new assistant |
+| `PROFILE.md`, `PREFERENCES.md` | Background and preferences you choose to record |
+| `NOW.md` | What you are doing and what comes next |
+| `raw/` | Original requests, documents or source records |
+| `wiki/` and `index.md` | Organized notes and links to find them |
+| `inbox/` | Suggested changes waiting for review |
+| `log.md` | A short record of meaningful updates |
+
+## Technical details
+
+The guides below cover permissions, file formats, evidence tracking and multiple writers. You can start with the quick-start steps above and return here when needed.
+
+- [Architecture and existing-vault integration](brain-carry/references/architecture.md)
+- [Engram/Obsidian connections and read/write checks](brain-carry/references/transports.md)
+- [Contribution rules and concurrent editing](brain-carry/references/contributions.md)
+- [Public release checks](brain-carry/references/public-release.md)
+
+<details>
+<summary>Local-only setup and Python tools</summary>
+
+Python 3.10+; standard library only. From this repository root, replace `/path/to/new-vault` with an absolute path. Windows users should use an absolute Windows path.
 
 ```text
 python brain-carry/scripts/bootstrap_vault.py --target /path/to/new-vault --dry-run
@@ -71,56 +110,37 @@ python brain-carry/scripts/bootstrap_vault.py --target /path/to/new-vault
 python brain-carry/scripts/validate_vault.py --vault /path/to/new-vault
 ```
 
-Python 3.10+; standard library only. On Windows, use an absolute Windows path. The initializer refuses nonempty destinations and never imports your chat history or existing profile. For an existing vault, follow the additive integration procedure in the skill instead of running the initializer over it.
+The initializer refuses nonempty destinations. For an existing vault, use the additive integration procedure; it preserves existing files instead of replacing them.
 
-## Choose the sharing model
+</details>
 
-| Mode | What works | What you configure |
-| --- | --- | --- |
-| **Shared cloud notes (recommended)** | Authorized agents retrieve and edit the same cloud knowledge without keeping a personal computer online; Obsidian is a synced human interface | Explicit service authorization, cloud vault selection, per-client credentials, mobile plugin when supported, read/write tests |
-| Local Markdown (offline fallback) | An assistant with filesystem access reads and edits notes, but its computer must be available for that access | A local folder and client instructions |
-| Manual snapshot | A client reads an explicitly supplied brief | Export or paste only the relevant context |
-| Optional Git backup | Version history and recovery | A private destination and a user-requested commit/push |
+<details>
+<summary>Sharing, privacy and concurrent edits</summary>
 
-The skill is portable guidance, not a sync server. Engram is optional. Every assistant needs its own authorized access, supported tools and startup instruction. No claim of universal client compatibility or automatic account-level memory synchronization is made.
+Use one live notes-sync transport for a vault. Do not add independent Git pull, iCloud or another bidirectional sync process over the same files without a deliberate conflict-handling design.
 
-When a remote cloud connection is available, a phone assistant can work with cloud notes while a computer is off. The desktop vault catches up when its sync application runs again. A local-only MCP server instead needs its host online. Phone client access must be tested separately.
+Git ignore rules and cloud exclusion settings are independent. Keep credentials, employer records and private archives outside the shared scope. The public skill and your filled-in private vault are separate artifacts.
 
-## How contributions work
+Reread a page before changing it. If another assistant may be editing the same page, save a uniquely named suggestion in `inbox/`. You or a designated editor review and merge it. CRDT text convergence does not resolve contradictory facts.
 
-Read the index and current page, preserve dated evidence, update the relevant synthesis, and record meaningful changes. If another agent may be editing the same page, write a unique proposal into `inbox/`. A designated editor merges proposals; CRDT text convergence alone does not resolve contradictory claims.
+Client permissions, mobile tool support and supported file formats require their own checks. Markdown notes syncing correctly does not establish that scripts, arbitrary JSON or application settings also sync. A structural or privacy check cannot guarantee factual accuracy or detect every private detail.
 
-Start each connected client with:
+</details>
 
-> Read AGENTS.md, index.md, AI_BRIEF.md and PREFERENCES.md from my selected vault. Read NOW.md when continuing work. Follow Workflows.md for contributions and SYNC_SETUP.md for transport boundaries. Use a unique inbox proposal when page ownership is unclear. Do not configure background jobs or push to GitHub unless I explicitly request it.
-
-## Boundaries
-
-- Connecting a tool does not automatically save every conversation or load every note.
-- A public skill repository and a private personal vault are separate artifacts. Never publish a filled-in personal vault as a skill update.
-- `.gitignore` affects Git; each sync service needs its own exclusion settings.
-- Do not run two independent bidirectional sync systems against the same live vault.
-- Shell scripts, arbitrary JSON and local application settings may not be supported by a notes sync provider. Verify formats before promising parity.
-- Checks detect selected problems; they do not establish factual accuracy or guarantee that no personal information remains.
-
-## Development and public release
-
-Run from the repository root:
+<details>
+<summary>Development and release commands</summary>
 
 ```text
 python tests/test_braincarry.py
 python brain-carry/scripts/check_release.py --root .
-```
-
-`--forbid-text` can add project-specific phrases to the release check; do not pass actual credentials as command-line arguments. Inspect the release manifest and content manually before publishing. Test artifacts belong in `.local/`, which is excluded from release packaging and Git.
-
-Create a clean, explicit release archive when requested:
-
-```text
 python brain-carry/scripts/package_release.py --root . --output .local/brain-carry.zip
 ```
 
-This command packages only the public allowlist after validation. It does not publish or upload anything. GitHub publication is a separate, explicitly requested action; these tools never configure a remote or push.
+Use repeated `--forbid-text` flags to check relevant private phrases; never pass real credentials as shell arguments. Inspect the release manifest and contents before publishing. Temporary files belong in `.local/` and stay out of Git and release archives.
+
+Packaging creates a local archive. It does not configure a remote, publish, or upload anything. GitHub publication requires a separate explicit request.
+
+</details>
 
 See [contributing](CONTRIBUTING.md), [launch copy](docs/launch-copy.md) and [website maintenance](docs/website.md).
 

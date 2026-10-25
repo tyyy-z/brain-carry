@@ -28,7 +28,7 @@ Commit reviewed edits to gh-pages to publish them. Pages is configured to publis
 - The recommended setup is Engram Cloud + Obsidian, with per-client authorization and real read/write checks. Local-only Markdown remains an offline fallback.
 - Shared cloud notes do not change a model's built-in memory or reload an active conversation automatically.
 - The primary download is currently main's source ZIP. The initial v0.1.0 release predates the cloud-first documentation updates; do not label it as containing them.
-- Keep Project Lattice and S-DEMO-01 labeled as synthetic examples. Never replace them with a private vault screenshot.
+- Keep the interview-preparation example and S-DEMO-01 labeled as fictional. Use ordinary scenarios such as job interviews, study plans, side projects or writing. Never replace the example with a private vault screenshot.
 
 ## Publication checks
 
@@ -49,3 +49,7 @@ python scripts/build_locales.py
 ```
 
 Commit the generated zh.html and i18n.js along with source changes. language.js manages the optional saved preference; script.js manages the demo. The generator uses Python's standard library and checks that English source strings still match their translations. Hosting remains static with no build step. Chinese glyphs use a local Noto Sans SC subset; font source/license and subset update guidance are in assets/FONTS.md.
+
+## Writing for the public
+
+Lead with what a person can do and a familiar example. Explain the next action before introducing filenames or architecture. Define necessary terms once. Keep metadata, synchronization limits and concurrency mechanics in the technical guides. Update both languages, demo states and no-JavaScript fallback together; regenerate the Chinese font subset when adding glyphs.

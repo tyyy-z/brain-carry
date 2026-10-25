@@ -1,45 +1,45 @@
-# BrainCarry launch kit
+# BrainCarry launch copy
 
-## Name and positioning
+## Positioning
 
-Name: **BrainCarry**. Skill ID: `brain-carry`. Suggested repository name: `brain-carry`.
+**Models change. Your context stays.**
 
-Tagline: **Models change. Your context stays.**
-
-Description: A Markdown-first Agent Skill for portable personal context and a shared Second Brain, with explicit contribution rules and optional Obsidian/Engram connectivity.
-
-The distinction is continuity of user-controlled context, not preservation of a model's identity, weights or consciousness. Knowledge should still evolve as the user changes and new evidence arrives. The name is a working release name, not a claim of trademark clearance.
+BrainCarry helps your AI assistants continue from the same saved background, preferences and next steps. It is a reusable skill with note templates and setup guides. Recommended sharing: Engram Cloud + Obsidian. GitHub backup stays manual.
 
 ## Short post
 
-Every new model should not mean introducing yourself from scratch.
+Preparing for an interview on your laptop, then practicing on your phone? Your next AI assistant should be able to read the background and next step you already saved.
 
-BrainCarry keeps your AI profile, current projects and useful knowledge in a Markdown vault you control. Authorized assistants can read it and contribute through a shared workflow. Obsidian for editing; optional Engram for cloud access; Git only when you ask.
+BrainCarry gives connected assistants a shared note workflow. Keep useful context in notes you control. Save updates when you ask.
 
 Models change. Your context stays.
 
-## Longer launch post
+## Longer post
 
-I built BrainCarry for a recurring problem: useful context keeps getting trapped in separate chats and assistants.
+I built BrainCarry because switching AI assistants often means explaining the same background again.
 
-It is an Agent Skill and a small set of Markdown templates and local tools. You keep a profile and current-work brief, preserve raw evidence, and let assistants maintain linked synthesis. Multiple agents use explicit contribution rules instead of blindly replacing the same page.
+Imagine preparing for a job interview. One assistant helps you choose a practice task. Later, another reads the saved plan and helps you continue. After practice, you ask it to save useful feedback and the next step.
 
-You can start with local files. An optional Engram/Obsidian setup lets authorized clients share cloud notes across devices. Each client still needs access and a real read/write test. There is no automatic chat harvesting, no background scheduler, and no automatic GitHub push.
+The same approach works for a study plan, side project or ongoing writing. BrainCarry provides a reusable Agent Skill, blank note templates and rules for assistants to read and maintain those notes.
 
-The public package contains generic templates and synthetic tests, not a personal profile. I would like feedback on onboarding friction, conflict handling and which client integrations people actually verify.
+For shared access, the recommended setup is Engram Cloud + Obsidian. Each assistant needs its own authorized connection and a real read/write test. Local files are also supported. Nothing here automatically saves every conversation or updates a model's built-in memory.
 
-## Demo plan
+The public package contains generic templates and synthetic tests. There is no periodic GitHub backup or automatic push. I would like feedback on which everyday workflows people find useful and where setup is still confusing.
 
-1. Initialize an empty demo vault, using only synthetic facts.
-2. Ask agent A to record a fictional project constraint with its source.
-3. Ask agent B to load the brief and propose a change in a unique inbox note.
-4. Merge the proposal, link its evidence and inspect the log.
-5. If a cloud adapter is connected, demonstrate an actual round trip. Otherwise label the transport diagram as a proposed setup.
+## A short demo
 
-Before a public demo, inspect the screen for account names, paths, notifications, tokens and unrelated vault tabs. Record a synthetic environment, not a personal vault.
+Use a fictional interview example, with no real CV or personal account details:
 
-## Publishing checklist
+1. Save a request to practice a 60-second introduction for a customer support interview, with short, direct feedback.
+2. Open the brief, the original request, the current plan and the change log.
+3. Show how a second authorized assistant would read the plan and continue. Demonstrate a real second client only if it is connected; otherwise label this as an illustration.
+4. Save practice feedback only after an actual session, distinguishing a planned task from completed work.
+5. If two assistants might edit one page, show a separate suggestion in `inbox/` and its review.
 
-Run the tests and release checker; inspect the archive manifest; choose the public repository destination; publish only after an explicit request. Add the actual repository URL to the post after it exists. Do not fabricate downloads, stars, user counts, benchmarks or client endorsements.
+The website's interactive example is browser-local and fictional. It does not access a visitor's notes or demonstrate a live Engram connection.
 
-Suggested channels: a GitHub README and release, a short X post, and a community post where project-sharing rules allow it. No posts or messages are sent by this kit.
+## Before posting
+
+Link the actual repository or website. Check that screenshots contain only fictional details. Keep account names, notifications and credentials out of the recording. Report only clients and behaviors actually tested; do not invent user counts, testimonials or performance gains.
+
+Suggested places: the GitHub README and release, a short X post, or a community that allows project sharing. Preparing this copy does not send or post it anywhere.
