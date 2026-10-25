@@ -6,7 +6,7 @@ This branch contains the static website. The skill, tests and release instructio
 
 Edit index.html for English copy, translations/zh-CN.json for Chinese copy, site.config.js for downloads, styles.css for appearance and script.js for the English demo. Run `python scripts/build_locales.py` after copy edits to generate zh.html and i18n.js. No npm or hosting build is required.
 
-The header language link remembers a choice locally and preserves the selected demo file and section. Both language pages remain readable without JavaScript. Filenames and commands stay in English. Reciprocal hreflang links and distinct canonical URLs identify both versions.
+The homepage defaults to English, including for visitors who previously selected Chinese. The header language link switches explicitly and preserves the selected demo file and section. Direct Chinese URLs remain available. Both language pages remain readable without JavaScript. Filenames and commands stay in English. Reciprocal hreflang links and distinct canonical URLs identify both versions.
 
 Open index.html or zh.html locally, or serve this directory with a local HTTP server. GitHub Pages publishes this branch's root. See [website maintenance](https://github.com/tyyy-z/brain-carry/blob/main/docs/website.md).
 
