@@ -1,8 +1,16 @@
 # Transports and client onboarding
 
+## Recommended flow: cloud-editable personal AI profile
+
+1. Ask the user which knowledge may enter a shared cloud vault; do not silently import private chats or sensitive files. If they approve Engram, connect the **existing** selected cloud vault when available; do not create competing vaults.
+2. Create or reconcile the minimal Markdown knowledge structure in the shared vault using the authorized cloud connector. Obsidian is an optional human-facing synced client, not a mandatory host for cloud edits.
+3. Onboard each AI client independently through authorized MCP/provider access. Configure startup instructions to read `AGENTS.md`, `index.md`, `AI_BRIEF.md` and relevant current/project notes from the specified vault. Explicitly retrieve again when checking for updates.
+4. Verify agent A writes a uniquely named nonsensitive test note; agent B reads the changed content **from the cloud**, and (where installed) Obsidian also receives it. Verify reverse writes and each phone/desktop independently. A document listing is not evidence of content sync; check actual bytes/contents and renderability for Canvas/attachments.
+5. Keep GitHub as optional **user-requested manual backup**, preferably after a synchronized desktop checkout is reconciled and validated. Never make GitHub or a powered-on laptop the required live path.
+
 ## Select one live transport
 
-For local-only use, give a supported assistant access to the chosen Markdown folder. For shared notes, choose a remote service and connect each client explicitly. Prefer available connected tools; do not invent API endpoints or tools.
+For the recommended cloud-first mode, use the user's explicitly authorized remote vault so agents can access it without relying on a powered-on desktop. For local-only fallback, give a supported assistant access to the chosen Markdown folder. Connect each cloud client explicitly. Prefer available connected tools; do not invent API endpoints or tools.
 
 Git is optional history/backup. Default: manual only. Do not set up periodic jobs or auto-push. If requested, verify the destination and visibility, review the file scope and normal push result. Never force-push or silently pull remote edits into an active sync directory. A stopped host cannot run a local backup.
 
@@ -36,6 +44,10 @@ Attachments are a user scope decision. Keep private attachments excluded; if app
 ## Per-client startup instruction
 
 Tell each client the selected private vault identifier and ask it to read AGENTS.md, index.md, AI_BRIEF.md, PREFERENCES.md and relevant current work. The client must have the required tools and permissions. Do not promise automatic discovery, automatic note saving or write support in an untested mobile surface.
+
+## Canvas and non-Markdown verification
+
+A note's presence or filename is not enough. For each supported format, separately verify cloud content, locally received content and application display. In particular, a `.canvas` file can appear in an Obsidian vault yet contain only an empty node array locally; do not mark it synced on filename presence alone. Record sizes, parseability and node count for Canvas; use format-specific checks for attachments. Preserve working originals and avoid overwriting them from an empty remote copy.
 
 ## Acceptance test
 
