@@ -38,7 +38,7 @@ Cabinet Grotesk is by Indian Type Foundry / Fontshare. Source and license inform
 
 ## English / Chinese
 
-Use the header's 中文 / English link to switch language. A browser-local preference remembers the choice when storage is available. The link preserves the selected example file and section. English: https://tyyy-z.github.io/brain-carry/?lang=en . Chinese: https://tyyy-z.github.io/brain-carry/zh.html .
+Use the header's 中文 / English link to switch language. The homepage defaults to English even if a browser previously saved a Chinese preference. Selecting the language link or visiting a language-specific URL explicitly chooses that language. The link preserves the selected example file and section. English: https://tyyy-z.github.io/brain-carry/?lang=en . Chinese: https://tyyy-z.github.io/brain-carry/zh.html .
 
 The two static pages have their own lang, canonical and reciprocal hreflang links. Both remain readable without JavaScript; filenames, commands and product names stay in English.
 
@@ -48,7 +48,7 @@ Edit index.html for English copy and translations/zh-CN.json for Chinese copy. I
 python scripts/build_locales.py
 ```
 
-Commit the generated zh.html and i18n.js along with source changes. language.js manages the optional saved preference; script.js manages the demo. The generator uses Python's standard library and checks that English source strings still match their translations. Hosting remains static with no build step. Chinese glyphs use a local Noto Sans SC subset; font source/license and subset update guidance are in assets/FONTS.md.
+Commit the generated zh.html and i18n.js along with source changes. language.js routes explicit language URLs without a stored preference overriding the English homepage; script.js manages the demo. The generator uses Python's standard library and checks that English source strings still match their translations. Hosting remains static with no build step. Chinese glyphs use a local Noto Sans SC subset; font source/license and subset update guidance are in assets/FONTS.md.
 
 ## Writing for the public
 
