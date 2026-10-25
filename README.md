@@ -1,23 +1,36 @@
+<p align="center">
+  <a href="https://tyyy-z.github.io/brain-carry/">
+    <img src="https://tyyy-z.github.io/brain-carry/assets/braincarry-banner.png" alt="BrainCarry: Context, to go. Engram Cloud shared notes connect authorized AI clients and Obsidian. Models change. Your context stays." width="1200">
+  </a>
+</p>
+
 # BrainCarry
 
 **Models change. Your context stays.**
 
 A cloud-first, Markdown-based Agent Skill for a personal AI profile and shared Second Brain across assistants, sessions and devices. **Recommended: Engram Cloud + Obsidian for everyday sync; GitHub only for optional manual backup.** Local-only Markdown remains supported.
 
+**[Explore the website](https://tyyy-z.github.io/brain-carry/)** · [Get the latest source](https://github.com/tyyy-z/brain-carry/archive/refs/heads/main.zip) · [Quick start](#quick-start) · [Read the skill](brain-carry/SKILL.md)
+
 Keep your context somewhere you control. Let authorized assistants read and contribute through an explicit workflow. Switch models without rebuilding the useful parts of your background from scratch.
 
 ## Recommended everyday workflow
 
-```text
-                  Engram Cloud · shared notes
-                  (authorized read / write)
-                             ↕
-         ┌───────────────────┼───────────────────┐
-         ↕                   ↕                   ↕
-  ChatGPT / Claude      Other AI agents      Obsidian devices
-  with Engram access    with Engram access    Windows / Mac / phone
-                                                  |
-                                                  └── optional manual Git backup
+```mermaid
+flowchart TB
+    Cloud["Engram Cloud<br/>Shared Markdown notes"]
+    Agents["Authorized AI clients<br/>ChatGPT, Claude and other agents"]
+    Obsidian["Obsidian<br/>Windows, Mac and phone"]
+    Backup["Optional private Git backup<br/>Only when you ask"]
+    Cloud <-->|Explicit read / write| Agents
+    Cloud <-->|Supported note sync| Obsidian
+    Obsidian -.->|Manual snapshot| Backup
+    classDef cloud fill:#c6f19d,color:#0f1f10,stroke:#c6f19d
+    classDef client fill:#162a17,color:#ffffff,stroke:#162a17
+    classDef backup fill:#f4f5f1,color:#172018,stroke:#f4f5f1
+    class Cloud cloud
+    class Agents,Obsidian client
+    class Backup backup
 ```
 
 An authorized assistant updates the **shared cloud note**, not a file on one particular laptop. Another connected assistant can fetch that latest note on its next retrieval, even if the computer is off. Obsidian synchronizes supported notes when its client runs. This **does not** update another model's built-in memory or push context into an already-running conversation. Each client needs its own connection and explicit retrieval behavior.
@@ -26,18 +39,23 @@ The Skill provides governance and setup instructions, **not** a hosted sync serv
 
 ## What it provides
 
-- A compact profile, preferences and current-work entry point.
-- Raw evidence, linked synthesis, an inbox and an append-only change log.
-- Rules for multiple agents to contribute without silently overwriting each other.
-- A **recommended cloud-first Engram/Obsidian workflow** with per-client onboarding and actual read/write verification; local-only operation stays available.
-- A local-only vault initializer, link validator and public-release checks.
-- Manual Git backup guidance. No scheduled jobs, polling, automatic commits or automatic pushes.
+| What you keep | Where it lives | What it gives the next assistant |
+| --- | --- | --- |
+| Your profile, preferences and current work | AI_BRIEF.md, PROFILE.md, PREFERENCES.md, NOW.md | A compact place to start |
+| Original evidence | raw/ | Source records separate from interpretation |
+| Connected knowledge | wiki/ and index.md | Maintained synthesis with a route back to evidence |
+| Proposed changes | inbox/ | A contribution path when another writer may be active |
+| Meaningful changes | log.md | An append-only handoff trail |
+
+The skill includes **cloud-first Engram/Obsidian setup guidance**, per-client onboarding and actual read/write verification. Local-only operation stays available, with a local vault initializer, link validator and public-release checks. Git backup remains manual: no scheduled jobs, polling, automatic commits or automatic pushes.
 
 This repository contains generic instructions, empty templates and synthetic tests. It contains no creator biography, personal vault export, private repository address or account credentials.
 
 ## Quick start
 
-Download the ZIP from this repository's Releases page, or download/clone the source. Extract it and copy the entire `brain-carry/` folder into a supported skill location.
+**[Download the latest source ZIP](https://github.com/tyyy-z/brain-carry/archive/refs/heads/main.zip)** for the current cloud-first instructions, or clone this repository. Extract it and copy the entire `brain-carry/` folder into a supported skill location.
+
+The initial [v0.1.0 release](https://github.com/tyyy-z/brain-carry/releases/tag/v0.1.0) is also available, but predates the cloud-first documentation updates on main.
 
 The skill lives in [`brain-carry/`](brain-carry/SKILL.md). Copy that entire directory into a skill location supported by your assistant, or ask an assistant with file access to read its `SKILL.md`. Installation and automatic discovery vary by client; copying a folder does not connect any account.
 
@@ -104,7 +122,7 @@ python brain-carry/scripts/package_release.py --root . --output .local/brain-car
 
 This command packages only the public allowlist after validation. It does not publish or upload anything. GitHub publication is a separate, explicitly requested action; these tools never configure a remote or push.
 
-See [contributing](CONTRIBUTING.md) and [launch copy](docs/launch-copy.md).
+See [contributing](CONTRIBUTING.md), [launch copy](docs/launch-copy.md) and [website maintenance](docs/website.md).
 
 ## Credits
 
