@@ -1,6 +1,15 @@
 # Access and sync setup
 
-Current mode: local Markdown only. No remote endpoint, account, vault or backup is configured by initialization.
+Current mode: **unconnected starter vault**. Recommended target mode: **Engram shared cloud notes + Obsidian sync**, with GitHub only as an optional, user-requested manual backup. Initialization alone does not create cloud access, an account, a plugin connection or a backup.
+
+## Cloud-first onboarding checklist
+
+- [ ] User explicitly approves which existing/new notes may be uploaded to the selected cloud provider.
+- [ ] Record exact Engram vault name/ID privately in this file; connect each authorized AI client independently.
+- [ ] Verify agent-to-cloud write and a separate agent-to-cloud read of changed content.
+- [ ] Connect Obsidian desktop/phone individually and verify both sync directions; offline devices catch up when their app runs.
+- [ ] Separately verify non-Markdown formats (Canvas, attachments) by actual content and display, not only filenames.
+- [ ] Only if user asks: manually reconcile and back up approved files to private GitHub; no schedule or auto-push.
 
 ## Before sharing
 
